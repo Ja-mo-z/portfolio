@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import planetTemp from "../assets/temp_planet.webp";
+import planetTemp from "../assets/planets/Writing_Planet.png";
+import { useState } from "react";
 
 export type PlanetProps = {
   id: string;
@@ -8,57 +9,54 @@ export type PlanetProps = {
   onMove: (pos: { x: number; y: number }) => void;
 };
 
-export default function Planet({
-  title,
-  position,
-  //   zIndex,
-  //   isOpen,
-  onMove,
-}: //   onToggleOpen,
-PlanetProps) {
+export default function Planet({ title, position, onMove }: PlanetProps) {
+  const [isDragging, setIsDragging] = useState(false);
   return (
     <motion.div
-      className="planet"
+      className="flex flex-col items-center justify-center gap-2"
       style={{
         position: "absolute",
-        left: position.x,
-        top: position.y,
-        // zIndex,
+        x: position.x,
+        y: position.y,
       }}
       drag
-      whileDrag={{
-        scale: 1.1,
-        boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
-      }}
       dragMomentum={false}
-      //   onDragStart={() => {}}
-      onDragEnd={(event, info) => {
+      dragElastic={0}
+      onDragStart={() => setIsDragging(true)}
+      onDragEnd={(e, info) => {
+        setIsDragging(false);
         onMove({
           x: info.point.x,
           y: info.point.y,
         });
-        console.log(event);
       }}
-      onClick={(e) => {
-        e.stopPropagation();
-        // onToggleOpen();
-      }}
-      animate={
-        {
-          // TODO
-        }
-      }
       transition={{ duration: 0.25 }}
+      // Glow only while dragging -- NOT WORKING
+      animate={
+        isDragging
+          ? {
+              filter: "drop-shadow(0 0 18px rgba(255, 255, 255, 0.9))",
+              scale: 1.1,
+              rotate: 2,
+            }
+          : { filter: "none", scale: 1, rotate: 0 }
+      }
+      whileDrag={{
+        scale: 1.1,
+        rotate: -5,
+        // filter: "drop-shadow(0 0 12px rgba(255, 255, 255, 0.8))",
+      }}
     >
-      <div className="flex items-center justify-center gap-2">
-        <div>
-          <img src={planetTemp} height={50} />
-        </div>
+      <motion.img
+        src={planetTemp}
+        className="h-16 w-16 select-none"
+        draggable={false}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "tween", stiffness: 50 }}
+      />
 
-        <div>{title}</div>
-        <div className="bg-red text-blue p-2">TEST</div>
-        <div className="bg-blue-500 w-32 h-32"></div>
-      </div>
+      <div className="text-center text-sm select-none">{title}</div>
     </motion.div>
   );
 }

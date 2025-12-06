@@ -6,10 +6,10 @@ export type PlanetData = {
 };
 
 export const planets: PlanetData[] = [
-  { id: "brand", title: "Brand Design", position: { x: 100, y: 100 } },
-  // {
-  //   id: "graphic",
-  //   title: "Graphic Design",
-  //   defaultPosition: { x: 300, y: 200 },
-  // },
+  { id: "writing", title: "Writing", position: { x: 100, y: 100 } },
+  {
+    id: "graphic",
+    title: "Graphic Design",
+    position: { x: 300, y: 200 },
+  },
 ];

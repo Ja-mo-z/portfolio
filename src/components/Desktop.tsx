@@ -34,7 +34,7 @@ export default function Desktop() {
   };
 
   return (
-    <div className="desktop">
+    <div className="bg-sky-950">
       {planets.map((p) => {
         const state = planetState[p.id];
 
