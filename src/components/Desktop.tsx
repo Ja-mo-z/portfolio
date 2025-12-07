@@ -1,66 +1,63 @@
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import Planet from "./Planet";
-import PlanetModal from "./PlanetModal";
-import type { PlanetData } from "../data/planets";
-import { planets } from "../data/planets";
-type PlanetState = {
-  [id: string]: PlanetData;
-};
+import { planets as initialPlanets } from "../data/planets";
+import { motion } from "framer-motion";
 
 export default function Desktop() {
-  // taking an array of values and turning it into one object
-  const [planetState, setPlanetState] = useState<PlanetState>(
-    // accumulator = thing you're building (initially {})
-    // p = current element in the array (i.e. accumulator[0])
-    // index = index of p
-    planets.reduce((accumulator, p, index) => {
-      accumulator[p.id] = {
-        id: p.id,
-        position: p.position,
-        title: p.title,
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-        // isOpen: false,
-        // zIndex: index,
-      };
-      return accumulator;
-    }, {} as PlanetState)
+  const [positions, setPositions] = useState(() =>
+    initialPlanets.map((p, i) => ({ id: p.id, x: 100 + i * 120, y: 100 }))
   );
 
-  const updatePosition = (id: string, pos: { x: number; y: number }) => {
-    setPlanetState((prev) => ({
-      ...prev,
-      [id]: { ...prev[id], position: pos },
-    }));
-  };
+  const [topId, setTopId] = useState<string | null>(null);
+
+  const handleFocus = useCallback((id: string) => setTopId(id), []);
+
+  const handleMove = useCallback(
+    (id: string, pos: { x: number; y: number }) => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      // get container bounds
+      const rect = container.getBoundingClientRect();
+
+      // clamp position inside container (middle 90% already)
+      const planetSize = 64; // size of planet image
+      const clampedX = Math.min(Math.max(pos.x, 0), rect.width - planetSize);
+      const clampedY = Math.min(Math.max(pos.y, 0), rect.height - planetSize);
+
+      setPositions((prev) =>
+        prev.map((p) => (p.id === id ? { ...p, x: clampedX, y: clampedY } : p))
+      );
+      setTopId(id);
+    },
+    []
+  );
 
   return (
-    <div className="bg-sky-950">
-      {planets.map((p) => {
-        const state = planetState[p.id];
+    <motion.div
+      ref={containerRef}
+      className="desktop relative w-[90vw] h-[90vh] mx-auto my-auto"
+    >
+      {initialPlanets.map((p, i) => {
+        const pos = positions.find((x) => x.id === p.id)!;
+        const zIndex = p.id === topId ? 2000 : 1000 + i;
 
         return (
-          <div key={p.id}>
-            <Planet
-              id={p.id}
-              title={p.title}
-              position={state.position}
-              //   zIndex={state.zIndex}
-              //   isOpen={state.isOpen}
-              onMove={(pos) => updatePosition(p.id, pos)}
-              //   onToggleOpen={() => toggleOpen(p.id)}
-              //   onBringToFront={() => bringToFront(p.id)}
-            />
-
-            {/* {state.isOpen && (
-              <PlanetModal
-                title={p.title}
-                planetPosition={state.position}
-                zIndex={state.zIndex + 100}
-              />
-            )} */}
-          </div>
+          <Planet
+            key={p.id}
+            id={p.id}
+            title={p.title}
+            content={p.content}
+            position={{ x: pos.x, y: pos.y }}
+            onMove={(pos) => handleMove(p.id, pos)}
+            onFocus={() => handleFocus(p.id)}
+            zIndex={zIndex}
+            dragConstraints={containerRef}
+          />
         );
       })}
-    </div>
+    </motion.div>
   );
 }
