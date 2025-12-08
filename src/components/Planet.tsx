@@ -7,6 +7,7 @@ export default function Planet({
   id,
   title,
   icon,
+  size,
   position,
   content,
   onMove,
@@ -16,6 +17,8 @@ export default function Planet({
 }: PlanetType) {
   const [isDragging, setIsDragging] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const planetSize = size ?? 32;
 
   const rotationDelay = useRef(Math.random() * 10).current;
 
@@ -54,10 +57,10 @@ export default function Planet({
       <motion.div className="flex flex-col items-center cursor-pointer select-none">
         <motion.img
           src={icon}
-          className="h-16 w-16 object-contain select-none"
+          className={`h-${planetSize} w-${planetSize} object-contain select-none`}
           draggable={false}
           animate={{
-            filter: "drop-shadow(0 0 16px rgba(255, 255, 255, 0.75))",
+            filter: "drop-shadow(0 0 32px rgba(255, 255, 255, 0.6))",
             rotate: 360,
           }}
           transition={{

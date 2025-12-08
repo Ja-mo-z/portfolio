@@ -50,6 +50,7 @@ export default function Desktop() {
             key={p.id}
             id={p.id}
             icon={p.icon}
+            size={p.size}
             title={p.title}
             content={p.content}
             position={{ x: pos.x, y: pos.y }}

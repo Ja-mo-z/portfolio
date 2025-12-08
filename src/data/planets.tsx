@@ -16,6 +16,7 @@ export const planets: PlanetType[] = [
     id: "writing",
     title: "Writing",
     icon: WritingPlanet,
+    size: 64,
     position: { x: 100, y: 100 },
     content: (
       <motion.div
@@ -33,15 +34,17 @@ export const planets: PlanetType[] = [
 
   {
     id: "graphic",
-    title: "Graphic Design",
+    title: "Illustrations",
+    size: 32,
     icon: GraphicDesignPlanet,
     position: { x: 300, y: 200 },
     content: <div></div>,
   },
 
   {
-    id: "brand",
-    title: "Brand Design",
+    id: "design",
+    title: "Design",
+    size: 64,
     icon: BrandDesignPlanet,
     position: { x: 400, y: 300 },
     content: <div></div>,
@@ -50,6 +53,8 @@ export const planets: PlanetType[] = [
   {
     id: "social",
     title: "Social Media Marketing",
+    size: 32,
+
     icon: SocialMediaPlanet,
     position: { x: 500, y: 200 },
     content: <div></div>,
@@ -58,6 +63,8 @@ export const planets: PlanetType[] = [
   {
     id: "animation",
     title: "Animation",
+    size: 16,
+
     icon: AnimationPlanet,
     position: { x: 1000, y: 600 },
     content: <div></div>,
@@ -66,6 +73,7 @@ export const planets: PlanetType[] = [
   {
     id: "film_video",
     title: "Film/Video",
+    size: 64,
     icon: FilmVideoPlanet,
     position: { x: 600, y: 200 },
     content: <div></div>,
@@ -74,6 +82,7 @@ export const planets: PlanetType[] = [
   {
     id: "xr",
     title: "XR",
+    size: 32,
     icon: XRPlanet,
     position: { x: 600, y: 300 },
     content: <div></div>,
