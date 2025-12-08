@@ -66,7 +66,7 @@ export const planets: PlanetType[] = [
   {
     id: "xr",
     title: "XR",
-    size: 32,
+    size: 16,
     icon: XRPlanet,
     position: { x: 0.8, y: 0.05 },
     content: <div></div>,

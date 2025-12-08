@@ -17,6 +17,7 @@
     "@tailwindcss/vite": "^4.1.17",
     "framer-motion": "^12.23.25",
     "install": "^0.13.0",
+    "moment-timezone": "^0.6.0",
     "motion": "^12.23.25",
     "npm": "^11.6.4",
     "react": "^19.2.0",

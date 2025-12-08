@@ -1,0 +1,19 @@
+import moment from "moment-timezone";
+
+const easternTime = moment().tz("America/New_York").format("LLLL");
+const [day, date, timeYear] = easternTime.split(", ");
+const [year, time, pm_am] = timeYear.split(" ");
+
+export default function Greetings() {
+  return (
+    <div className="text-center fixed top-0 left-0 w-full p-4 text-white">
+      <h1>Welcome to Jamie's Galaxy!</h1>
+      <p>There is much to explore, and many planets to discover.</p>
+
+      <h1>
+        {time} {pm_am} ET
+      </h1>
+      <h5>{date} </h5>
+    </div>
+  );
+}

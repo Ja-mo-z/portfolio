@@ -1,7 +1,9 @@
 import { useState, useRef, useCallback } from "react";
 import Planet from "./Planet";
+import Greetings from "./Greetings";
 import { planets as initialPlanets } from "../data/planets";
 import { motion } from "framer-motion";
+import About from "./About";
 
 export default function Desktop() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -41,30 +43,37 @@ export default function Desktop() {
   // console.log(initialPlanets);
 
   return (
-    <motion.div
-      ref={containerRef}
-      className="desktop relative w-[90vw] h-[90vh] mx-auto my-auto"
-    >
-      {initialPlanets.map((p, i) => {
-        const pos = positions.find((x) => x.id === p.id)!;
-        const zIndex = p.id === topId ? 2000 : 1000 + i;
+    <>
+      <div className="absolute top-24 left-24">
+        <About />
+      </div>
+      <Greetings />
 
-        return (
-          <Planet
-            key={p.id}
-            id={p.id}
-            icon={p.icon}
-            size={p.size}
-            title={p.title}
-            content={p.content}
-            position={{ x: pos.x, y: pos.y }}
-            onMove={(pos) => handleMove(p.id, pos)}
-            onFocus={() => handleFocus(p.id)}
-            zIndex={zIndex}
-            dragConstraints={containerRef}
-          />
-        );
-      })}
-    </motion.div>
+      <motion.div
+        ref={containerRef}
+        className="desktop relative w-[90vw] h-[90vh] mx-auto my-auto"
+      >
+        {initialPlanets.map((p, i) => {
+          const pos = positions.find((x) => x.id === p.id)!;
+          const zIndex = p.id === topId ? 2000 : 1000 + i;
+
+          return (
+            <Planet
+              key={p.id}
+              id={p.id}
+              icon={p.icon}
+              size={p.size}
+              title={p.title}
+              content={p.content}
+              position={{ x: pos.x, y: pos.y }}
+              onMove={(pos) => handleMove(p.id, pos)}
+              onFocus={() => handleFocus(p.id)}
+              zIndex={zIndex}
+              dragConstraints={containerRef}
+            />
+          );
+        })}
+      </motion.div>
+    </>
   );
 }
