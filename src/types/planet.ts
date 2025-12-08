@@ -6,6 +6,8 @@ export type PlanetPosition = {
 export type PlanetType = {
   id: string;
   title: string;
+  icon: string;
+  size?: number;
   content: React.ReactElement;
   position: PlanetPosition;
   dragConstraints?: React.RefObject<HTMLDivElement | null>;

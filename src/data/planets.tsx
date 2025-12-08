@@ -1,12 +1,21 @@
-// static planet info (will change in Desktop, where planets are dynamic)
-// import type { PlanetData } from "../types/planet";
+// static planet info
 import type { PlanetType } from "../types/planet";
 import { motion } from "motion/react";
+
+// Import all icons (for Vite to bundle them correctly)
+import WritingPlanet from "../assets/planets/Writing_Planet.png";
+import GraphicDesignPlanet from "../assets/planets/Graphic_Design_Planet.png";
+import BrandDesignPlanet from "../assets/planets/Brand_Design_Planet.png";
+import SocialMediaPlanet from "../assets/planets/Social_Media_Planet.png";
+import AnimationPlanet from "../assets/planets/Animation_Planet.png";
+import FilmVideoPlanet from "../assets/planets/FilmVideo_Planet.png";
+import XRPlanet from "../assets/planets/XR_Planet.png";
 
 export const planets: PlanetType[] = [
   {
     id: "writing",
     title: "Writing",
+    icon: WritingPlanet,
     position: { x: 100, y: 100 },
     content: (
       <motion.div
@@ -21,67 +30,52 @@ export const planets: PlanetType[] = [
       </motion.div>
     ),
   },
+
   {
     id: "graphic",
     title: "Graphic Design",
+    icon: GraphicDesignPlanet,
     position: { x: 300, y: 200 },
     content: <div></div>,
   },
+
   {
     id: "brand",
     title: "Brand Design",
+    icon: BrandDesignPlanet,
     position: { x: 400, y: 300 },
     content: <div></div>,
   },
+
   {
     id: "social",
     title: "Social Media Marketing",
+    icon: SocialMediaPlanet,
     position: { x: 500, y: 200 },
     content: <div></div>,
   },
+
   {
-    id: "film/video",
+    id: "animation",
+    title: "Animation",
+    icon: AnimationPlanet,
+    position: { x: 1000, y: 600 },
+    content: <div></div>,
+  },
+
+  {
+    id: "film_video",
     title: "Film/Video",
+    icon: FilmVideoPlanet,
     position: { x: 600, y: 200 },
     content: <div></div>,
   },
-];
 
-// Sample planet data
-// const planets: PlanetType[] = [
-//   {
-//     id: "brand",
-//     title: "Brand Design",
-// content: (
-//   <div>
-//     <h2>Brand Projects</h2>
-//     <ul>
-//       <li>Logo Redesign</li>
-//       <li>Brand Guidelines</li>
-//     </ul>
-//   </div>
-// ),
-//   },
-//   {
-//     id: "web",
-//     title: "Web Design",
-//     content: (
-//       <div>
-//         <h2>Web Projects</h2>
-//         <p>Interactive web pages, portfolios, and responsive designs.</p>
-//       </div>
-//     ),
-//   },
-//   {
-//     id: "motion",
-//     title: "Motion Graphics",
-//     content: (
-//       <div>
-//         <h2>Motion Projects</h2>
-//         <video width="320" height="180" controls>
-//           <source src="sample_video.mp4" type="video/mp4" />
-//         </video>
-//       </div>
-//     ),
-//   },
-// ];
+  {
+    id: "xr",
+    title: "XR",
+    icon: XRPlanet,
+    position: { x: 600, y: 300 },
+    content: <div></div>,
+  },
+];

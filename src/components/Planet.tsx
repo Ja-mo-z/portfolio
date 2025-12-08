@@ -3,23 +3,17 @@ import planetTemp from "../assets/planets/Writing_Planet.png";
 import { useState, useRef } from "react";
 import type { PlanetType } from "../types/planet";
 
-type PlanetProps = PlanetType & {
-  onMove?: (pos: { x: number; y: number }) => void;
-  onFocus?: () => void; // notify parent to bring this planet to top
-  zIndex?: number;
-  dragConstraints?: React.RefObject<HTMLDivElement>;
-};
-
 export default function Planet({
   id,
   title,
+  icon,
   position,
   content,
   onMove,
   onFocus,
   zIndex,
   dragConstraints,
-}: PlanetProps) {
+}: PlanetType) {
   const [isDragging, setIsDragging] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -59,11 +53,11 @@ export default function Planet({
       {/* Planet icon and title */}
       <motion.div className="flex flex-col items-center cursor-pointer select-none">
         <motion.img
-          src={planetTemp}
+          src={icon}
           className="h-16 w-16 object-contain select-none"
           draggable={false}
           animate={{
-            filter: "drop-shadow(0 0 18px rgba(255, 255, 255, 0.9))",
+            filter: "drop-shadow(0 0 16px rgba(255, 255, 255, 0.75))",
             rotate: 360,
           }}
           transition={{
@@ -92,7 +86,7 @@ export default function Planet({
               transform: "translateX(-50%)",
               zIndex: (zIndex ?? 1000) + 1,
             }}
-            className="bg-white/10 backdrop-blur-lg text-white rounded-lg p-3 w-72"
+            className="bg-white/10 backdrop-blur-lg text-white rounded-lg p-3 w-100"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center mb-2">

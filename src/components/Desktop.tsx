@@ -34,6 +34,7 @@ export default function Desktop() {
     },
     []
   );
+  // console.log(initialPlanets);
 
   return (
     <motion.div
@@ -48,6 +49,7 @@ export default function Desktop() {
           <Planet
             key={p.id}
             id={p.id}
+            icon={p.icon}
             title={p.title}
             content={p.content}
             position={{ x: pos.x, y: pos.y }}
