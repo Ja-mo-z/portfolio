@@ -17,7 +17,7 @@ export const planets: PlanetType[] = [
     title: "Writing",
     icon: WritingPlanet,
     size: 64,
-    position: { x: 100, y: 100 },
+    position: { x: 0.05, y: 0.6 },
     content: (
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
@@ -27,64 +27,56 @@ export const planets: PlanetType[] = [
           scale: { type: "tween", visualDuration: 0.4, bounce: 0.5 },
         }}
       >
-        <h1>YAYAYAYS</h1>hey
+        <h1>Writing</h1>
       </motion.div>
     ),
   },
-
-  {
-    id: "graphic",
-    title: "Illustrations",
-    size: 32,
-    icon: GraphicDesignPlanet,
-    position: { x: 300, y: 200 },
-    content: <div></div>,
-  },
-
   {
     id: "design",
     title: "Design",
     size: 64,
     icon: BrandDesignPlanet,
-    position: { x: 400, y: 300 },
+    position: { x: 0.35, y: 0.35 },
     content: <div></div>,
   },
-
-  {
-    id: "social",
-    title: "Social Media Marketing",
-    size: 32,
-
-    icon: SocialMediaPlanet,
-    position: { x: 500, y: 200 },
-    content: <div></div>,
-  },
-
-  {
-    id: "animation",
-    title: "Animation",
-    size: 16,
-
-    icon: AnimationPlanet,
-    position: { x: 1000, y: 600 },
-    content: <div></div>,
-  },
-
   {
     id: "film_video",
     title: "Film/Video",
     size: 64,
     icon: FilmVideoPlanet,
-    position: { x: 600, y: 200 },
+    position: { x: 0.7, y: 0.2 },
     content: <div></div>,
   },
-
+  {
+    id: "graphic",
+    title: "Illustrations",
+    size: 32,
+    icon: GraphicDesignPlanet,
+    position: { x: 0.55, y: 0.55 },
+    content: <div></div>,
+  },
+  {
+    id: "social",
+    title: "Social Media Marketing",
+    size: 32,
+    icon: SocialMediaPlanet,
+    position: { x: 0.25, y: 0.65 },
+    content: <div></div>,
+  },
   {
     id: "xr",
     title: "XR",
     size: 32,
     icon: XRPlanet,
-    position: { x: 600, y: 300 },
+    position: { x: 0.8, y: 0.05 },
+    content: <div></div>,
+  },
+  {
+    id: "animation",
+    title: "Animation",
+    size: 16,
+    icon: AnimationPlanet,
+    position: { x: 0.6, y: 0.15 },
     content: <div></div>,
   },
 ];

@@ -19,6 +19,8 @@ export default function Planet({
   const [isOpen, setIsOpen] = useState(false);
 
   const planetSize = size ?? 32;
+  const screenW = window.innerWidth;
+  const screenH = window.innerHeight;
 
   const rotationDelay = useRef(Math.random() * 10).current;
 
@@ -26,8 +28,8 @@ export default function Planet({
     <motion.div
       className="absolute flex flex-col items-center"
       style={{
-        x: position.x,
-        y: position.y,
+        x: position.x * screenW,
+        y: position.y * screenH,
         zIndex: zIndex ?? (isDragging ? 9999 : 1000),
       }}
       drag

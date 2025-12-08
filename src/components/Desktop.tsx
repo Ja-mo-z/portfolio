@@ -7,7 +7,11 @@ export default function Desktop() {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const [positions, setPositions] = useState(() =>
-    initialPlanets.map((p, i) => ({ id: p.id, x: 100 + i * 120, y: 100 }))
+    initialPlanets.map((p) => ({
+      id: p.id,
+      x: p.position.x,
+      y: p.position.y,
+    }))
   );
 
   const [topId, setTopId] = useState<string | null>(null);
