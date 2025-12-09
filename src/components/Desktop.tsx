@@ -4,6 +4,7 @@ import Greetings from "./Greetings";
 import { planets as initialPlanets } from "../data/planets";
 import { motion } from "framer-motion";
 import About from "./About";
+import Ambient from "./Ambient";
 
 export default function Desktop() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -40,11 +41,13 @@ export default function Desktop() {
     },
     []
   );
+
   // console.log(initialPlanets);
 
   return (
     <>
-      <div className="absolute top-24 left-24">
+      <Ambient />
+      <div className="absolute top-24 left-24 z-20000">
         <About />
       </div>
       <Greetings />

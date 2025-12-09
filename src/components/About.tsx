@@ -8,10 +8,10 @@ export default function About() {
         src={Sparkle}
         alt="Animated Planet"
         className="h-32 w-32"
-        initial={{ scale: 0.8 }}
+        initial={{ scale: 0.95 }}
         animate={{ scale: 1 }}
         transition={{
-          duration: 1,
+          duration: 2,
           repeat: Infinity,
           repeatType: "mirror",
         }}
