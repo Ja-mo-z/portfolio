@@ -99,7 +99,7 @@ export default function Planet({
             <div className="flex justify-between items-center mb-2">
               <h3 className="font-semibold text-sm">{title}</h3>
               <button
-                className="text-blue-400 text-sm bg-transparent p-0 border-none hover:bg-transparent"
+                className="text-white text-sm bg-transparent p-0 border-none cursor-pointer hover:bg-transparent"
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsOpen(false);

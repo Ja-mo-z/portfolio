@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { motion } from "motion/react";
 
 export default function TabPanel() {
-  const tabs = ["About", "Projects", "Contact"];
+  const tabs = ["About", "Contact", "Website"];
   const [active, setActive] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [tabWidth, setTabWidth] = useState(0);
@@ -36,13 +36,15 @@ export default function TabPanel() {
       )}
 
       {/* Tabs */}
-      <div className="relative flex">
+      <div className="absolute top-0 left-0 w-full z-10 flex">
         {tabs.map((tab, i) => (
           <button
             key={tab}
             style={{ height: 24, fontSize: "0.75rem" }}
             onClick={() => setActive(i)}
-            className="flex-1 text-center z-10 text-white font-semibold bg-transparent hover:bg-white/10"
+            // className="flex-1 relative top-0 left-0 rounded-md"
+
+            className="flex-1 text-center justify-center z-10 top-0 left-0 bg-transparent "
           >
             {tab}
           </button>

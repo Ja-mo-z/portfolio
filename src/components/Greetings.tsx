@@ -6,14 +6,17 @@ const [year, time, pm_am] = timeYear.split(" ");
 
 export default function Greetings() {
   return (
-    <div className="text-center fixed top-0 left-0 w-full p-4 text-white">
-      <h1>Welcome to Jamie's Galaxy!</h1>
-      <p>There is much to explore, and many planets to discover.</p>
+    <div className="text-center fixed top-16 left-0 w-full p-4 text-white">
+      <div style={{ fontSize: "2rem", fontWeight: "bold" }}>
+        Welcome to Jamie's Galaxy!
+      </div>
+      {/* <p>There is much to explore, and many planets to discover.</p> */}
 
       <h1>
-        {time} {pm_am} ET
+        {time}
+        {pm_am.toLowerCase()}
       </h1>
-      <h5>{date} </h5>
+      {/* <h5>{date} </h5> */}
     </div>
   );
 }

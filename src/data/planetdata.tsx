@@ -13,7 +13,7 @@ import XRPlanet from "../assets/planets/XR_Planet.png";
 import Sparkle from "../assets/Sparkle.png";
 
 // Import all tab contents (for Vite to bundle them correctly)
-import AboutTab from "../components/TabContent/AboutTab";
+import AboutTab from "../components/TabContent/About/AboutTab";
 
 export const planets: PlanetType[] = [
   {
