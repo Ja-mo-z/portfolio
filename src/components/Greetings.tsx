@@ -8,7 +8,7 @@ export default function Greetings() {
   return (
     <div className="text-center fixed top-16 left-0 w-full p-4 text-white">
       <div style={{ fontSize: "2rem", fontWeight: "bold" }}>
-        Welcome to Jamie's Galaxy!
+        Welcome to Jamie's galaxZ!
       </div>
       {/* <p>There is much to explore, and many planets to discover.</p> */}
 

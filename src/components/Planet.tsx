@@ -92,11 +92,15 @@ export default function Planet({
               transform: "translateX(-50%)",
               zIndex: (zIndex ?? 1000) + 1,
               width: Math.min(screenW * 0.4, 400),
+              height: Math.min(screenH * 0.5, 300),
             }}
-            className="bg-white/10 backdrop-blur-lg text-white rounded-lg p-3 "
+            className="bg-white/10 backdrop-blur-lg text-white rounded-t-lg overflow-y-auto no-scrollbar"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-between items-center mb-2">
+            <div
+              className="sticky top-0 z-20 flex justify-between items-center 
+             bg-black/70 backdrop-blur-lg p-2 rounded-t-md"
+            >
               <h3 className="font-semibold text-sm">{title}</h3>
               <button
                 className="text-white text-sm bg-transparent p-0 border-none cursor-pointer hover:bg-transparent"

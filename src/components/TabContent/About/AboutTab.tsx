@@ -1,54 +1,89 @@
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { motion } from "motion/react";
 
-export default function TabPanel() {
-  const tabs = ["About", "Contact", "Website"];
-  const [active, setActive] = useState(0);
+export default function AboutTab() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [tabWidth, setTabWidth] = useState(0);
-
-  // Calculate tab width on mount & resize
-  useLayoutEffect(() => {
-    const updateWidth = () => {
-      if (containerRef.current) {
-        setTabWidth(containerRef.current.offsetWidth / tabs.length);
-      }
-    };
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
-  }, [tabs.length]);
 
   return (
     <div
       ref={containerRef}
-      style={{ height: 24 }}
-      className="relative w-full max-w-md bg-white/20 backdrop-blur-md rounded-lg p-1"
+      style={{ fontSize: "0.75rem" }}
+      className="relative w-full max-w-md rounded-lg p-3 leading-relaxed"
     >
-      {/* Highlight bar */}
-      {tabWidth > 0 && (
-        <motion.div
-          className="absolute top-0 left-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-md"
-          animate={{ x: active * tabWidth }}
-          style={{ width: tabWidth, height: "100%" }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        />
-      )}
-
-      {/* Tabs */}
-      <div className="absolute top-0 left-0 w-full z-10 flex">
-        {tabs.map((tab, i) => (
-          <button
-            key={tab}
-            style={{ height: 24, fontSize: "0.75rem" }}
-            onClick={() => setActive(i)}
-            // className="flex-1 relative top-0 left-0 rounded-md"
-
-            className="flex-1 text-center justify-center z-10 top-0 left-0 bg-transparent "
+      <div className="bg-white-100/70 backdrop-blur-xl rounded-lg p-4 text-white">
+        {/* Header */}
+        <div className="text-lg font-bold mb-1 text-blue-400">Jamie Z.</div>
+        <p className="text-white/80 mb-4">
+          Aspiring writer, filmmaker, illustrator, and developer
+        </p>
+        {/* Contact */}
+        <div className="flex gap-2 mb-6 text-white/70 text-xs">
+          <a href="#" className="text-teal-300 hover:underline">
+            LinkedIn
+          </a>
+          <span className="text-white/40">•</span>
+          <a
+            href="mailto:your@email.com"
+            className="text-teal-300 hover:underline"
           >
-            {tab}
-          </button>
-        ))}
+            Email
+          </a>
+        </div>
+        {/* Divider */}
+        <div className="border-t-1 border-white/70 my-2" />
+        Hello! Thank you for stopping by. My name is Jamie, and I am currently
+        working on ...
+        {/* Section 1 */}
+        <div className="mb-6">
+          <ul className="list-disc ml-5 space-y-1 text-white/80">
+            <li>Writing a novel</li>
+            <li>Color grading a short film</li>
+            <li>Mobile app development</li>
+            <li>Digital art and illustration</li>
+            <li>Design</li>
+            <li>Animation</li>
+          </ul>
+        </div>
+        {/* Divider */}
+        <div className="border-t-1 border-white/70 my-2" />
+        {/* Section 2 */}
+        <div className="mb-6">
+          <div className="font-semibold text-white mb-2 text-sm">
+            What gets me excited
+          </div>
+          <ul className="list-disc ml-5 space-y-1 text-white/80">
+            <li>Dark chocolate</li>
+            <li>Tasty snacks</li>
+            <li>Good food</li>
+            <li>Good stories</li>
+            <li>No bugs within my vincinity</li>
+          </ul>
+        </div>
+        {/* Divider */}
+        <div className="border-t-1 border-white/70 my-2" />
+        {/* Section 3 */}
+        <div className="mb-6">
+          <div className="font-semibold text-white mb-2 text-sm">
+            What I want to try
+          </div>
+          <ul className="list-disc ml-5 space-y-1 text-white/80">
+            <li>3D modeling and printing</li>
+            <li>Crochet</li>
+            <li>Acting</li>
+            <li>Songwriting</li>
+          </ul>
+        </div>
+        {/* Divider */}
+        <div className="border-t-1 border-white/70 my-2" />
+        {/* Section 3 */}
+        <div className="mb-2">
+          <div className="font-semibold text-white mb-2 text-sm">Education</div>
+          <p className="text-white/80">
+            Bachelor of Science in Film, Television, and Media <br />
+            Bachelor of Science in Computer Science <br />
+            <span className="text-white/50 text-xs">Graduated May 2025</span>
+          </p>
+        </div>
       </div>
     </div>
   );
