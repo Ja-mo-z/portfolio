@@ -91,14 +91,15 @@ export default function Planet({
               left: "50%",
               transform: "translateX(-50%)",
               zIndex: (zIndex ?? 1000) + 1,
+              width: Math.min(screenW * 0.4, 400),
             }}
-            className="bg-white/10 backdrop-blur-lg text-white rounded-lg p-3 w-100"
+            className="bg-white/10 backdrop-blur-lg text-white rounded-lg p-3 "
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center mb-2">
               <h3 className="font-semibold text-sm">{title}</h3>
               <button
-                className="text-blue-400 text-md"
+                className="text-blue-400 text-sm bg-transparent p-0 border-none hover:bg-transparent"
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsOpen(false);

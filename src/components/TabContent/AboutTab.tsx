@@ -1,32 +1,52 @@
-import { useState } from "react";
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { motion } from "motion/react";
 
-export default function AboutTab() {
-  const [activeTab, setActiveTab] = useState(0);
-  const tabs = ["About", "Website"];
+export default function TabPanel() {
+  const tabs = ["About", "Projects", "Contact"];
+  const [active, setActive] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [tabWidth, setTabWidth] = useState(0);
+
+  // Calculate tab width on mount & resize
+  useLayoutEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setTabWidth(containerRef.current.offsetWidth / tabs.length);
+      }
+    };
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, [tabs.length]);
 
   return (
-    <div className="flex flex-col gap-2">
+    <div
+      ref={containerRef}
+      style={{ height: 24 }}
+      className="relative w-full max-w-md bg-white/20 backdrop-blur-md rounded-lg p-1"
+    >
+      {/* Highlight bar */}
+      {tabWidth > 0 && (
+        <motion.div
+          className="absolute top-0 left-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-md"
+          animate={{ x: active * tabWidth }}
+          style={{ width: tabWidth, height: "100%" }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        />
+      )}
+
       {/* Tabs */}
-      <div className="flex gap-2 items-center justify-center">
+      <div className="relative flex">
         {tabs.map((tab, i) => (
           <button
-            key={i}
-            onClick={() => setActiveTab(i)}
-            className={`px-2 py-1 rounded-md border-3 bg-white ${
-              activeTab === i
-                ? "border-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"
-                : "border-gray-300"
-            }`}
+            key={tab}
+            style={{ height: 24, fontSize: "0.75rem" }}
+            onClick={() => setActive(i)}
+            className="flex-1 text-center z-10 text-white font-semibold bg-transparent hover:bg-white/10"
           >
             {tab}
           </button>
         ))}
-      </div>
-
-      {/* Content */}
-      <div className="mt-2 p-2 border rounded-md">
-        {activeTab === 0 && <div>Content for Tab 1</div>}
-        {activeTab === 1 && <div>Content for Tab 2</div>}
       </div>
     </div>
   );
