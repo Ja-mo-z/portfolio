@@ -8,6 +8,7 @@ export default function Planet({
   title,
   icon,
   size,
+  shouldRotate = true,
   position,
   content,
   onMove,
@@ -59,11 +60,12 @@ export default function Planet({
       <motion.div className="flex flex-col items-center cursor-pointer select-none">
         <motion.img
           src={icon}
-          className={`h-${planetSize} w-${planetSize} object-contain select-none`}
+          style={{ width: planetSize * screenW, height: planetSize * screenW }}
+          className={`object-contain select-none`}
           draggable={false}
           animate={{
             filter: "drop-shadow(0 0 32px rgba(255, 255, 255, 0.6))",
-            rotate: 360,
+            rotate: shouldRotate ? 360 : 0,
           }}
           transition={{
             duration: 50,

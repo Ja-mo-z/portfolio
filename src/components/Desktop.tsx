@@ -47,9 +47,9 @@ export default function Desktop() {
   return (
     <>
       <Ambient />
-      <div className="absolute top-24 left-24 z-20000">
+      {/* <div className="absolute top-24 left-24 z-20000">
         <About />
-      </div>
+      </div> */}
       <Greetings />
 
       <motion.div
@@ -67,6 +67,7 @@ export default function Desktop() {
               icon={p.icon}
               size={p.size}
               title={p.title}
+              shouldRotate={p.shouldRotate}
               content={p.content}
               position={{ x: pos.x, y: pos.y }}
               onMove={(pos) => handleMove(p.id, pos)}

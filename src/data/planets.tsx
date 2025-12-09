@@ -10,13 +10,34 @@ import SocialMediaPlanet from "../assets/planets/Social_Media_Planet.png";
 import AnimationPlanet from "../assets/planets/Animation_Planet.png";
 import FilmVideoPlanet from "../assets/planets/FilmVideo_Planet.png";
 import XRPlanet from "../assets/planets/XR_Planet.png";
+import Sparkle from "../assets/Sparkle.png";
 
 export const planets: PlanetType[] = [
+  {
+    id: "about",
+    title: "About Me!",
+    icon: Sparkle,
+    size: 0.15,
+    position: { x: 0.05, y: 0.05 },
+    shouldRotate: false,
+    content: (
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.4,
+          scale: { type: "tween", visualDuration: 0.4, bounce: 0.5 },
+        }}
+      >
+        <h1>About</h1>
+      </motion.div>
+    ),
+  },
   {
     id: "writing",
     title: "Writing",
     icon: WritingPlanet,
-    size: 64,
+    size: 0.15,
     position: { x: 0.05, y: 0.6 },
     content: (
       <motion.div
@@ -34,7 +55,7 @@ export const planets: PlanetType[] = [
   {
     id: "design",
     title: "Design",
-    size: 64,
+    size: 0.15,
     icon: BrandDesignPlanet,
     position: { x: 0.35, y: 0.35 },
     content: <div></div>,
@@ -42,7 +63,7 @@ export const planets: PlanetType[] = [
   {
     id: "film_video",
     title: "Film/Video",
-    size: 64,
+    size: 0.15,
     icon: FilmVideoPlanet,
     position: { x: 0.7, y: 0.2 },
     content: <div></div>,
@@ -50,7 +71,7 @@ export const planets: PlanetType[] = [
   {
     id: "graphic",
     title: "Illustrations",
-    size: 32,
+    size: 0.085,
     icon: GraphicDesignPlanet,
     position: { x: 0.55, y: 0.55 },
     content: <div></div>,
@@ -58,7 +79,7 @@ export const planets: PlanetType[] = [
   {
     id: "social",
     title: "Social Media Marketing",
-    size: 32,
+    size: 0.075,
     icon: SocialMediaPlanet,
     position: { x: 0.25, y: 0.65 },
     content: <div></div>,
@@ -66,7 +87,7 @@ export const planets: PlanetType[] = [
   {
     id: "xr",
     title: "XR",
-    size: 16,
+    size: 0.075,
     icon: XRPlanet,
     position: { x: 0.8, y: 0.05 },
     content: <div></div>,
@@ -74,7 +95,7 @@ export const planets: PlanetType[] = [
   {
     id: "animation",
     title: "Animation",
-    size: 16,
+    size: 0.075,
     icon: AnimationPlanet,
     position: { x: 0.6, y: 0.15 },
     content: <div></div>,

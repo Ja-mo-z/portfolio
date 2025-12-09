@@ -8,6 +8,7 @@ export type PlanetType = {
   title: string;
   icon: string;
   size?: number;
+  shouldRotate?: boolean;
   content: React.ReactElement;
   position: PlanetPosition;
   dragConstraints?: React.RefObject<HTMLDivElement | null>;
