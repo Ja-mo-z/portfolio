@@ -12,6 +12,9 @@ import FilmVideoPlanet from "../assets/planets/FilmVideo_Planet.png";
 import XRPlanet from "../assets/planets/XR_Planet.png";
 import Sparkle from "../assets/Sparkle.png";
 
+// Import all tab contents (for Vite to bundle them correctly)
+import AboutTab from "../components/TabContent/AboutTab";
+
 export const planets: PlanetType[] = [
   {
     id: "about",
@@ -20,18 +23,7 @@ export const planets: PlanetType[] = [
     size: 0.15,
     position: { x: 0.05, y: 0.05 },
     shouldRotate: false,
-    content: (
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.4,
-          scale: { type: "tween", visualDuration: 0.4, bounce: 0.5 },
-        }}
-      >
-        <h1>About</h1>
-      </motion.div>
-    ),
+    content: <AboutTab />,
   },
   {
     id: "writing",

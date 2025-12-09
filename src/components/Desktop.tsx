@@ -1,9 +1,9 @@
 import { useState, useRef, useCallback } from "react";
 import Planet from "./Planet";
 import Greetings from "./Greetings";
-import { planets as initialPlanets } from "../data/planets";
+import { planets as initialPlanets } from "../data/planetdata";
 import { motion } from "framer-motion";
-import About from "./About";
+import About from "./TabContent/AboutTab";
 import Ambient from "./Ambient";
 
 export default function Desktop() {

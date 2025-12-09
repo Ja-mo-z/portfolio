@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
-import planetTemp from "../assets/planets/Writing_Planet.png";
 import { useState, useRef } from "react";
 import type { PlanetType } from "../types/planet";
+import useWindowDimensions from "../data/windowSize";
 
 export default function Planet({
   id,
@@ -20,8 +20,7 @@ export default function Planet({
   const [isOpen, setIsOpen] = useState(false);
 
   const planetSize = size ?? 32;
-  const screenW = window.innerWidth;
-  const screenH = window.innerHeight;
+  const { width: screenW, height: screenH } = useWindowDimensions();
 
   const rotationDelay = useRef(Math.random() * 10).current;
 
