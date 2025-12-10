@@ -45,11 +45,5 @@ export default function FilmVideo() {
     },
   ];
 
-  return (
-    <VideoShowcaseTemplate
-      tools={tools}
-      videos={videos}
-      tabTitle="My Tools & Projects"
-    />
-  );
+  return <VideoShowcaseTemplate tools={tools} videos={videos} />;
 }

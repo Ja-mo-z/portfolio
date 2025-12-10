@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import VolumeOff from "../assets/Volume_Off.png";
-import VolumeOn from "../assets/Volume_On.png";
+import VolumeOff from "../assets/volume_off.svg";
+import VolumeOn from "../assets/volume_on.svg";
 
 export default function Ambient() {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -32,7 +32,7 @@ export default function Ambient() {
     <div className="z-[9999] fixed bottom-4 right-4">
       <button
         onClick={isPlaying ? disableSound : enableSound}
-        className=" py-1 rounded shadow  size-10 flex items-center justify-center"
+        className=" py-1 rounded shadow  size-8 flex items-center justify-center"
       >
         {isPlaying ? <img src={VolumeOn} /> : <img src={VolumeOff} />}
       </button>

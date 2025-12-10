@@ -44,7 +44,7 @@ export default function XR() {
     <VideoShowcaseTemplate
       tools={tools}
       videos={videos}
-      tabTitle="My Tools & Projects"
+      //   tabTitle="Tools & Projects"
     />
   );
 }

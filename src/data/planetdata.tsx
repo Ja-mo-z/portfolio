@@ -20,7 +20,7 @@ import FilmVideo from "../components/ModalContent/FilmVideo";
 // import GraphicDesign from "../components/ModalContent/GraphicDesign";
 // import SocialMedia from "../components/ModalContent/SocialMedia";
 // import BrandDesign from "../components/ModalContent/BrandDesign";
-// import Writing from "../components/ModalContent/Writing";
+import Writing from "../components/ModalContent/Writing";
 
 export const planets: PlanetType[] = [
   {
@@ -38,18 +38,7 @@ export const planets: PlanetType[] = [
     icon: WritingPlanet,
     size: 0.15,
     position: { x: 0.05, y: 0.6 },
-    content: (
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.4,
-          scale: { type: "tween", visualDuration: 0.4, bounce: 0.5 },
-        }}
-      >
-        <h1>Writing</h1>
-      </motion.div>
-    ),
+    content: <Writing />,
   },
   {
     id: "design",

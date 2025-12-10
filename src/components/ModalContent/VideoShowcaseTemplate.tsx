@@ -16,7 +16,7 @@ interface VideoShowcaseProps {
 export default function VideoShowcaseTemplate({
   tools,
   videos,
-  tabTitle = "Tools",
+  tabTitle,
 }: VideoShowcaseProps) {
   return (
     <div className="relative w-full max-w-md p-3 text-white text-sm">
