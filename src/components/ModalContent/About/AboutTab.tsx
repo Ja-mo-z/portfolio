@@ -50,7 +50,7 @@ export default function AboutTab() {
         </div>
         {/* Divider */}
         <div className="border-t-1 border-white/70 my-2" />
-        <div className="mt-6">
+        <div className="mt-4">
           Hello! Thank you for stopping by. My name is Jamie, and I am currently
           working on ...
         </div>
@@ -68,7 +68,7 @@ export default function AboutTab() {
         {/* Divider */}
         <div className="border-t-1 border-white/70 my-2" />
         {/* Section 2 */}
-        <div className="mb-6 mt-6">
+        <div className="mb-6 mt-4">
           <div className="font-semibold text-indigo-200 mb-2 text-sm">
             What gets me excited
           </div>
@@ -85,7 +85,7 @@ export default function AboutTab() {
         {/* Divider */}
         <div className="border-t-1 border-white/70 my-2" />
         {/* Section 3 */}
-        <div className="mb-6 mt-6">
+        <div className="mb-6 mt-4">
           <div className="font-semibold text-indigo-200 mb-2 text-sm">
             What I want to try
           </div>
@@ -99,7 +99,7 @@ export default function AboutTab() {
         {/* Divider */}
         <div className="border-t-1 border-white/70 my-2" />
         {/* Section 3 */}
-        <div className="mb-2 mt-6">
+        <div className="mb-2 mt-4">
           <div className="font-semibold text-indigo-200 mb-2 text-sm">
             Education
           </div>

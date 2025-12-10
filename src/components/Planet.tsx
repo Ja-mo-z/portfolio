@@ -50,7 +50,7 @@ export default function Planet({
           });
       }}
       whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.98 }}
+      // whileTap={{ scale: 0.98 }}
       whileDrag={{ scale: 1.05, rotate: -5 }}
       onClick={isDragging ? undefined : () => setIsOpen(true)}
       transition={{ type: "tween", stiffness: 300, damping: 30 }}

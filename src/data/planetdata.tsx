@@ -14,6 +14,13 @@ import Sparkle from "../assets/Sparkle.png";
 
 // Import all tab contents (for Vite to bundle them correctly)
 import AboutTab from "../components/ModalContent/About/AboutTab";
+import XR from "../components/ModalContent/XR";
+import Animation from "../components/ModalContent/Animation";
+import FilmVideo from "../components/ModalContent/FilmVideo";
+// import GraphicDesign from "../components/ModalContent/GraphicDesign";
+// import SocialMedia from "../components/ModalContent/SocialMedia";
+// import BrandDesign from "../components/ModalContent/BrandDesign";
+// import Writing from "../components/ModalContent/Writing";
 
 export const planets: PlanetType[] = [
   {
@@ -58,7 +65,7 @@ export const planets: PlanetType[] = [
     size: 0.15,
     icon: FilmVideoPlanet,
     position: { x: 0.7, y: 0.2 },
-    content: <div></div>,
+    content: <FilmVideo />,
   },
   {
     id: "graphic",
@@ -82,7 +89,7 @@ export const planets: PlanetType[] = [
     size: 0.075,
     icon: XRPlanet,
     position: { x: 0.8, y: 0.05 },
-    content: <div></div>,
+    content: <XR />,
   },
   {
     id: "animation",
@@ -90,6 +97,6 @@ export const planets: PlanetType[] = [
     size: 0.075,
     icon: AnimationPlanet,
     position: { x: 0.6, y: 0.15 },
-    content: <div></div>,
+    content: <Animation />,
   },
 ];

@@ -11,7 +11,7 @@ export default function Greetings() {
         Welcome to Jamie's galaxZ!
       </div>
       {/* <p>There is much to explore, and many planets to discover.</p> */}
-      <p style={{ fontSize: "0.8rem" }}>It is currently {date}</p>
+      <p style={{ fontSize: "0.8rem" }}>It is currently {date}, Eastern Time</p>
 
       <h1>
         {time}
