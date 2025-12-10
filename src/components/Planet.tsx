@@ -103,7 +103,7 @@ export default function Planet({
             >
               <h3 className="font-semibold text-sm">{title}</h3>
               <button
-                className="text-white text-sm bg-transparent p-0 border-none cursor-pointer hover:bg-transparent"
+                className="text-white text-md bg-transparent p-0 border-none cursor-pointer hover:scale-125 transform transition-transform duration-200 ease-in-out"
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsOpen(false);

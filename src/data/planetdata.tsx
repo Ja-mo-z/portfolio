@@ -13,14 +13,14 @@ import XRPlanet from "../assets/planets/XR_Planet.png";
 import Sparkle from "../assets/Sparkle.png";
 
 // Import all tab contents (for Vite to bundle them correctly)
-import AboutTab from "../components/TabContent/About/AboutTab";
+import AboutTab from "../components/ModalContent/About/AboutTab";
 
 export const planets: PlanetType[] = [
   {
     id: "about",
     title: "About Me!",
     icon: Sparkle,
-    size: 0.15,
+    size: 0.1,
     position: { x: 0.05, y: 0.05 },
     shouldRotate: false,
     content: <AboutTab />,
