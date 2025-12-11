@@ -10,6 +10,7 @@ export default function Animation() {
     "After Effects",
     "Illustrator",
     "Photoshop",
+    "Davinci Resolve",
   ];
   const videos = [
     {

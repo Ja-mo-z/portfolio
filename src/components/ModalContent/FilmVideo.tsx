@@ -20,12 +20,12 @@ export default function FilmVideo() {
         <div className="h-24 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
           This was the first film I worked on with the amazing director Tianyi
           Zhai! I served as the Director of Photography, which meant I was
-          behind the camera—and also the one figuring out how to fly a DJI drone
-          for the very first time. I even broke two propellers during my initial
-          practice run. Despite the rocky start, capturing the aerial shot of
-          the bridge and water that Evelyn looks out over became one of my
-          favorite visual contributions to the film and a major learning moment
-          for me.
+          behind the camera - and also the one figuring out how to fly a DJI
+          drone for the very first time. I broke two propellers during my
+          initial practice run. Despite the rocky start, capturing the aerial
+          shot of the bridge and water that Evelyn looks out over became one of
+          my favorite visual contributions to the film and a major learning
+          moment for me.
         </div>
       ),
       embedUrl: "https://videopress.com/embed/qqwW4dOr",
@@ -37,8 +37,8 @@ export default function FilmVideo() {
         <div className="h-24 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
           <p>
             Forever grateful to work with Tianyi again! For this project, I was
-            the script supervisor. That role was perhaps one of the hardest
-            things I’ve ever had to do on a film set as it required acute
+            the script supervisor. This role was perhaps one of the hardest
+            things I’ve ever had to do on a film set because it requires acute
             attention to detail.{" "}
           </p>
           <p>
@@ -50,8 +50,8 @@ export default function FilmVideo() {
           </p>
           <p>
             After this experience, I’ve become more attentive to little details
-            like that in bigger films and shows. It doesn’t surprise me how
-            often some small details slip by.{" "}
+            while watching shows or movies, and have gained a new appreciation
+            for script supervisors. Kudos to those doing it professionally!
           </p>
         </div>
       ),
