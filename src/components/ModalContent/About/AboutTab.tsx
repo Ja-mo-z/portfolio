@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { motion } from "motion/react";
 import sparkles from "../../../assets/sparkles_emoji.svg";
-import mailIcon from "../../../assets/Mail.png";
-import linkedInIcon from "../../../assets/LinkedIn.png";
+import mailIcon from "../../../assets/icons/Mail.png";
+import linkedInIcon from "../../../assets/icons/LinkedIn.png";
 
 export default function AboutTab() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -20,11 +20,11 @@ export default function AboutTab() {
             <div className="text-lg  text-sky-200  font-bold mb-1 text-neutral-300">
               Jamie Z.
             </div>{" "}
-            <img
+            {/* <img
               src={sparkles}
               alt="Sparkles"
               className="inline-block size-4 "
-            />
+            /> */}
           </div>
         </div>
         <p className="text-white/80 mb-4">

@@ -42,7 +42,7 @@ export default function PDFTabShowcase({ tabData }: PDFTabShowcaseProps) {
         >
           {tabWidth > 0 && (
             <motion.div
-              className="absolute top-0 left-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-md"
+              className="absolute top-0 left-0 bg-gradient-to-r from-blue-400 to-fuchsia-400 rounded-md"
               style={{ width: tabWidth, height: "100%" }}
               animate={{ x: activeTab * tabWidth }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -82,33 +82,39 @@ export default function PDFTabShowcase({ tabData }: PDFTabShowcaseProps) {
         </div>
 
         {/* ------------------ PDF MODAL ------------------ */}
+        {/* ------------------ PDF MODAL ------------------ */}
         <AnimatePresence>
           {selectedPDF && (
             <motion.div
-              key="pdf-modal"
+              key="modal"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4"
+              className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+              onClick={() => setSelectedPDF(null)}
             >
               <motion.div
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.95 }}
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.95, opacity: 0 }}
                 transition={{ type: "spring", stiffness: 120 }}
-                className="relative w-full max-w-3xl h-[80vh] bg-black/90 rounded-lg overflow-hidden"
+                className="relative w-full max-w-3xl h-[80vh] bg-white rounded-lg overflow-y-auto shadow-lg"
+                onClick={(e) => e.stopPropagation()}
               >
+                {/* Close button */}
                 <button
-                  className="absolute top-2 right-3 text-white text-3xl hover:scale-125 transition z-10"
+                  className="absolute top-2 right-3 text-black text-2xl hover:scale-125 transition"
                   onClick={() => setSelectedPDF(null)}
                 >
                   ×
                 </button>
 
+                {/* PDF content */}
                 <iframe
-                  src={selectedPDF.url}
-                  className="w-full h-full"
+                  src={selectedPDF.url} // <-- use the selectedPDF object
                   title={selectedPDF.title}
+                  className="w-full h-[calc(100%-2rem)] p-4"
+                  style={{ border: "none" }}
                 />
               </motion.div>
             </motion.div>

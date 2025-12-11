@@ -33,9 +33,9 @@ const tabs = [
     documents: [
       {
         id: 0,
-        title: "Essay 1",
+        title: "Coloring Historical Pictures",
         description: "Essay PDF.",
-        url: "/pdfs/essay1.pdf",
+        url: "/pdfs/442_final_proj.pdf",
       },
     ],
   },

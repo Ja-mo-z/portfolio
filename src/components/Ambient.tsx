@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import VolumeOff from "../assets/volume_off.svg";
-import VolumeOn from "../assets/volume_on.svg";
+import VolumeOff from "../assets/icons/volume_off.svg";
+import VolumeOn from "../assets/icons/volume_on.svg";
 
 export default function Ambient() {
   const audioRef = useRef<HTMLAudioElement>(null);
