@@ -99,6 +99,16 @@ export default function Documentation({ size }: { size: number }) {
                     Icons
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://www.npmjs.com/package/framer-motion"
+                    className="underline hover:text-blue-400"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Motion for React
+                  </a>
+                </li>
               </ul>
 
               <p className="font-semibold text-indigo-200">

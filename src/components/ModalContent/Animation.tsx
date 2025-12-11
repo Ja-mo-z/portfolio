@@ -19,34 +19,61 @@ export default function Animation() {
           title: "Fibarcode Product Video",
           description:
             "Short description of the first video project. Explore the Design Planet to see more of my work with Fibarcode!",
-          embedUrl: "https://www.youtube.com/embed/bTZkqVq29wQ",
+          embedUrl: "https://www.youtube.com/embed/Cbr8IiMHhyE ",
         },
         {
           id: 1,
           title: "Just Keep Swimming",
-          description: "Short description of the second video project.",
-          embedUrl: "https://www.youtube.com/embed/WHz7r5i27os",
+          description: (
+            <div className="h-24 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
+              A girl goes for a seemingly ordinary swim but is pulled down by
+              unseen forces. This animation explores the overwhelming, addictive
+              feeling of hopelessness—the girl gets in the pool and follows the
+              jellyfish deeper despite knowing she shouldn’t. The jellyfish
+              symbolizes a dangerous comfort, luring her (and others) into the
+              darkness. While this is my interpretation, the meaning is
+              ultimately open to the viewer!
+            </div>
+          ),
+          embedUrl: "https://www.youtube.com/embed/mxWIG3HSp0Q",
         },
         {
           id: 2,
           title: "Golden Shovel Agency Animated Logo",
-          description: "Short description of the third video project.",
+          description: "A short motion graphic for Golden Shovel’s podcasts.",
           embedUrl: "https://www.youtube.com/embed/xhZO8VmhIwE",
         },
       ],
     },
     {
-      name: "Experimenting",
+      name: "Experimentation",
       // title: "Experimental Animation Projects",
       tools: ["After Effects", "Moho", "Photoshop"],
       videos: [
         {
           id: 3,
           title: "Morphing Shapes",
-          description: "Short description of the fourth video project.",
+          description: "Made with After Effects.",
           embedUrl: "https://www.youtube.com/embed/dTg96kWUarA",
         },
-        // Add more experimental videos here if you have them
+        {
+          id: 4,
+          title: "Ballet-Astronaut Animation",
+          description: "Made with Adobe Animate.",
+          embedUrl: "https://www.youtube.com/embed/n-FsfopKObc",
+        },
+        {
+          id: 5,
+          title: "Character Animation",
+          description: "Made with Moho.",
+          embedUrl: "https://www.youtube.com/embed/lbXoTctF-_E",
+        },
+        {
+          id: 6,
+          title: "Title Animation",
+          description: "Made with After Effects.",
+          embedUrl: "https://www.youtube.com/embed/dTg96kWUarA",
+        },
       ],
     },
   ];
