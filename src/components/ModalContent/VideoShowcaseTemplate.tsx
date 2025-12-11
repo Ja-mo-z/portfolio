@@ -3,8 +3,9 @@ import { motion } from "motion/react";
 export interface Video {
   id: number;
   title: string;
-  description: string;
-  ytId: string;
+  description: string | React.ReactElement;
+  embedUrl?: string; // YouTube, Vimeo, VideoPress, etc.
+  videoSrc?: string; // direct .mp4, .mov, etc.
 }
 
 interface VideoShowcaseProps {
@@ -52,15 +53,27 @@ export default function VideoShowcaseTemplate({
               className="cursor-pointer"
             >
               <div className="relative overflow-hidden rounded-md">
-                <iframe
-                  width="100%"
-                  src={`https://www.youtube.com/embed/${v.ytId}`}
-                  title={v.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="rounded-md"
-                />
+                {/* --- If it's an iframe video (YouTube, Vimeo, VideoPress) --- */}
+                {v.embedUrl && (
+                  <iframe
+                    width="100%"
+                    src={v.embedUrl}
+                    title={v.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-md w-full aspect-video"
+                  />
+                )}
+
+                {/* --- If it's a direct file (mp4, mov) --- */}
+                {v.videoSrc && (
+                  <video
+                    controls
+                    src={v.videoSrc}
+                    className="rounded-md w-full aspect-video"
+                  />
+                )}
               </div>
 
               <div className="mt-2">

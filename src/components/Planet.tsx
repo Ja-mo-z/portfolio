@@ -98,7 +98,7 @@ export default function Planet({
               width: Math.min(screenW * 0.4, 400),
               height: Math.min(screenH * 0.5, 300),
             }}
-            className="bg-white/10 backdrop-blur-lg text-white rounded-t-lg rounded-b-lg overflow-y-auto no-scrollbar"
+            className="bg-white/10 backdrop-blur-lg text-white rounded-t-lg rounded-b-lg overflow-y-auto "
             onClick={(e) => e.stopPropagation()}
           >
             <div

@@ -23,7 +23,7 @@ export default function Greetings() {
       <div
         style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "0.5rem" }}
       >
-        Welcome to Jamie's galaxZ
+        Welcome to Jamie galaxZ
       </div>
 
       <h1>

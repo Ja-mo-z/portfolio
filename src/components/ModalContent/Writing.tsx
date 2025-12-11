@@ -5,9 +5,25 @@ const tabs = [
     documents: [
       {
         id: 0,
+        title: "Had A Farm",
+        description: (
+          <div>
+            <p>
+              Old MacDonald{" "}
+              <i>
+                <b>had</b>
+              </i>{" "}
+              a Farm. Hmmm, why the past tense?
+            </p>
+          </div>
+        ),
+        url: "pdfs/HadFarm.pdf",
+      },
+      {
+        id: 1,
         title: "The Start of a World",
         description: (
-          <div className="h-12 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
+          <div className="h-24 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
             {" "}
             <p>
               In <strong>“Start of a World”</strong>, I wanted to twist the
@@ -36,34 +52,19 @@ const tabs = [
         ),
         url: "pdfs/StartWorld.pdf",
       },
-      {
-        id: 1,
-        title: "Had A Farm",
-        description: (
-          <div>
-            <p>
-              Old MacDonald{" "}
-              <i>
-                <b>had</b>
-              </i>{" "}
-              a Farm. Hmmm, why the past tense?
-            </p>
-          </div>
-        ),
-        url: "pdfs/HadFarm.pdf",
-      },
+
       {
         id: 2,
         title: "I See You",
         description: (
-          <div className="h-12 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
+          <div className="h-24 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
             <p>
               I wrote this book when I was 16. The only idea I remember clearly
               is that I wanted it to begin with a funeral and end with a
               wedding. It’s been more than five years, though, so I’ve forgotten
-              most of it. I briefly skimmed through it before putting it here,
-              and I can confidently tell you that as a 16 year old, I was really
-              really … not Mary Shelley.
+              the actual plot. I briefly skimmed through it before putting it
+              here, and I can confidently tell you that as a 16 year old, I was
+              really really … not Mary Shelley.
             </p>
             <p>
               Nevertheless, I’m proud of it, simply because getting through the
@@ -73,7 +74,7 @@ const tabs = [
             </p>
           </div>
         ),
-        url: "pdfs/HadFarm.pdf",
+        url: "pdfs/ISeeYou.pdf",
       },
     ],
   },
@@ -90,11 +91,25 @@ const tabs = [
       },
       {
         id: 1,
-        title: "The Impact of Social Media on Mental Health",
+        title: "Locked in Place",
         description:
           "Analysis of Flannery O’Connor’s A Good Man is Hard to Find and how it explores entrenched hierarchies, systemic injustices, and stagnant societal norms.",
-        url: "pdfs/mental_health.pdf",
+        url: "pdfs/locked_in_place.pdf",
       },
+      {
+        id: 2,
+        title: "Camera Basics",
+        description:
+          "An introductory guide to understanding the fundamental concepts and techniques of the Exposure Triangle.",
+        url: "pdfs/camera_basics.pdf",
+      },
+      // {
+      //   id: 3,
+      //   title: "Alcohol and Dopamine",
+      //   description:
+      //     "An exploration of the relationship between alcohol consumption and dopamine levels in the brain.",
+      //   url: "pdfs/alcohol_and_dopamine.pdf",
+      // },
     ],
   },
   {
@@ -102,10 +117,10 @@ const tabs = [
     documents: [
       {
         id: 0,
-        title: "Pop it, Lock it",
+        title: "POP it, LOCK it",
         description:
           "A hypothetical commercial for PopSocket written in AV script format.",
-        url: "pdfs/product_descriptions.pdf",
+        url: "pdfs/PopIt.pdf",
       },
     ],
   },
