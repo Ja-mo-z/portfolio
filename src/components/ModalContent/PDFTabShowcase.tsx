@@ -1,10 +1,11 @@
-import { useState, useRef, useLayoutEffect } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+// import external_link from "../../assets/icons/external_link.svg";
 
 export interface PDFDocument {
   id: number;
   title: string;
-  description: string;
+  description: string | React.ReactElement;
   url: string;
 }
 
@@ -56,7 +57,7 @@ export default function PDFTabShowcase({ tabData }: PDFTabShowcaseProps) {
                 className="flex-1 flex items-center justify-center h-full text-xs font-semibold text-white z-10"
                 onClick={() => setActiveTab(i)}
               >
-                {tab.name}
+                {tab.name}{" "}
               </button>
             ))}
           </div>
@@ -71,10 +72,31 @@ export default function PDFTabShowcase({ tabData }: PDFTabShowcaseProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               className="cursor-pointer bg-black/30 p-2 rounded-md hover:bg-black/50"
-              onClick={() => window.open(doc.url, "_blank")}
             >
-              <div className="font-semibold text-indigo-200">{doc.title}</div>
-              <div className="text-white/70 text-xs mt-1">
+              <div
+                className="font-semibold text-indigo-200 hover:text-white hover:scale-101 transition-transform ease-in-out flex gap-2 items-center"
+                onClick={() =>
+                  window.open(`${import.meta.env.BASE_URL}${doc.url}`, "_blank")
+                }
+              >
+                {doc.title}{" "}
+                <span className="inline-block ml-1 ">
+                  <svg
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M18.885 2a1 1 0 00-1-1h-6a1 1 0 100 2h3.586L9.178 9.293a1 1 0 101.414 1.414l6.293-6.293V8a1 1 0 102 0V2zM3.009 3a2.012 2.012 0 00-1.998 2.218c.148 1.453.374 3.978.374 5.782 0 1.746-.212 4.17-.36 5.642a2.028 2.028 0 002.218 2.218c1.473-.148 3.896-.36 5.642-.36 1.804 0 4.33.226 5.782.374a2.012 2.012 0 002.218-1.998V12a1 1 0 10-2 0v4.878l-.003.003a.018.018 0 01-.006.003h-.006c-1.451-.147-4.068-.384-5.985-.384-1.857 0-4.37.222-5.842.37h-.008a.034.034 0 01-.012-.008.033.033 0 01-.008-.012.01.01 0 010-.002v-.006c.148-1.473.37-3.985.37-5.842 0-1.917-.237-4.534-.385-5.985v-.006l.004-.006A.016.016 0 013.007 5h4.878a1 1 0 000-2H3.009z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div className="text-white/70 text-xs mt-1 bg-white/5 p-2 rounded-md ">
                 {doc.description}
               </div>
             </motion.div>

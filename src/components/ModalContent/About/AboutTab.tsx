@@ -51,7 +51,8 @@ export default function AboutTab() {
         {/* Divider */}
         <div className="border-t-1 border-white/70 my-2" />
         <div className="mt-4">
-          Hi, I'm Jamie. Thank you for checking in! I'm currently working on ...
+          Hi, I'm Jamie. Thank you for dropping by my galaxZ! Currently, I'm
+          working on ...
         </div>
         {/* Section 1 */}
         <div className="mb-6">
