@@ -43,7 +43,7 @@ export default function PDFTabShowcase({ tabData }: PDFTabShowcaseProps) {
         >
           {tabWidth > 0 && (
             <motion.div
-              className="absolute top-0 left-0 bg-gradient-to-r from-blue-400 to-fuchsia-400 rounded-md"
+              className="absolute top-0 left-0 bg-gradient-to-r from-sky-300 to-gray rounded-md"
               style={{ width: tabWidth, height: "100%" }}
               animate={{ x: activeTab * tabWidth }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}

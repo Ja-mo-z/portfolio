@@ -112,7 +112,7 @@ export default function AboutTab() {
           </ul>
         </div>
         {/* Divider */}
-        <div className="border-t-1 border-white/70 my-2" />
+        {/* <div className="border-t-1 border-white/70 my-2" /> */}
         {/* Section 2 */}
         <div className="mb-6 mt-4">
           <div className="font-semibold text-indigo-200 mb-2 text-sm">
@@ -129,7 +129,7 @@ export default function AboutTab() {
           </ul>
         </div>
         {/* Divider */}
-        <div className="border-t-1 border-white/70 my-2" />
+        {/* <div className="border-t-1 border-white/70 my-2" /> */}
         {/* Section 3 */}
         <div className="mb-6 mt-4">
           <div className="font-semibold text-indigo-200 mb-2 text-sm">
@@ -143,7 +143,7 @@ export default function AboutTab() {
           </ul>
         </div>
         {/* Divider */}
-        <div className="border-t-1 border-white/70 my-2" />
+        {/* <div className="border-t-1 border-white/70 my-2" /> */}
         {/* Section 3 */}
         <div className="mb-2 mt-4">
           <div className="font-semibold text-indigo-200 mb-2 text-sm">
