@@ -32,8 +32,17 @@
 //   )
 // }
 
+// import { ShootingStars } from "@/components/ui/shooting-stars";
+
 import Desktop from "./components/Desktop";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
 
 export default function App() {
-  return <Desktop />;
+  return (
+    <>
+      <ShootingStars />
+      <StarsBackground /> <Desktop />
+    </>
+  );
 }

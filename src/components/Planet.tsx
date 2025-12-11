@@ -73,7 +73,11 @@ export default function Planet({
             delay: rotationDelay,
           }}
         />
-        {!isOpen && <div className="text-sm mt-1 select-none">{title}</div>}
+        {!isOpen && (
+          <div className="text-sm mt-1 max-w-32 text-center select-none">
+            {title}
+          </div>
+        )}
       </motion.div>
 
       {/* Modal below planet */}
