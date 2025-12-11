@@ -40,9 +40,14 @@ import { StarsBackground } from "@/components/ui/stars-background";
 
 export default function App() {
   return (
-    <>
-      <ShootingStars />
-      <StarsBackground /> <Desktop />
-    </>
+    <div className="w-screen h-screen overflow-hidden bg-gradient-to-b from-black via-zinc-900 to-black relative">
+      <ShootingStars className="absolute top-0 left-0 w-full h-full" />
+      <StarsBackground className="absolute top-0 left-0 w-full h-full" />
+
+      {/* Foreground content */}
+      <div className="relative z-10">
+        <Desktop />
+      </div>
+    </div>
   );
 }
