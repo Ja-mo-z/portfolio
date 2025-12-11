@@ -38,13 +38,14 @@ import Desktop from "./components/Desktop";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import RocketCursor from "rocket-cursor-component";
+import DesktopWarning from "./components/DesktopWarning";
 
 export default function App() {
   return (
     <div className="w-screen h-screen overflow-hidden bg-gradient-to-b from-black via-zinc-900 to-black relative">
+      <DesktopWarning /> {/* <-- overlay warning for small screens */}
       <ShootingStars className="absolute top-0 left-0 w-full h-full" />
       <StarsBackground className="absolute top-0 left-0 w-full h-full" />
-
       {/* Foreground content */}
       <div className="relative z-10">
         <Desktop />
