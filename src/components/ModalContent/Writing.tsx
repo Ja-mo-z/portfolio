@@ -64,7 +64,7 @@ const tabs = [
               wedding. It’s been more than five years, though, so I’ve forgotten
               the actual plot. I briefly skimmed through it before putting it
               here, and I can confidently tell you that as a 16 year old, I was
-              really really ...
+              really really.
             </p>
             <p>... not Mary Shelley.</p>
             <p>

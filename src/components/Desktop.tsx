@@ -3,8 +3,8 @@ import Planet from "./Planet";
 import Greetings from "./Greetings";
 import { planets as initialPlanets } from "../data/planetdata";
 import { motion } from "framer-motion";
-import About from "./ModalContent/About/AboutTab";
 import Ambient from "./Ambient";
+import Documentation from "./Documentation";
 
 export default function Desktop() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -46,10 +46,9 @@ export default function Desktop() {
 
   return (
     <>
+      <Documentation size={32} />
       <Ambient />
-      {/* <div className="absolute top-24 left-24 z-20000">
-        <About />
-      </div> */}
+
       <Greetings />
 
       <motion.div

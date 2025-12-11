@@ -6,7 +6,7 @@ export default function DesktopWarning() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const checkWidth = () => setIsMobile(window.innerWidth < 768);
+    const checkWidth = () => setIsMobile(window.innerWidth < 700);
     checkWidth();
     window.addEventListener("resize", checkWidth);
     return () => window.removeEventListener("resize", checkWidth);

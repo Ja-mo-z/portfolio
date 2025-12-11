@@ -35,7 +35,7 @@ export default function PDFTabShowcase({ tabData }: PDFTabShowcaseProps) {
 
   return (
     <div className="relative w-full max-w-md p-3 text-white text-sm">
-      <div className="bg-white/10 backdrop-blur-xl rounded-lg p-4">
+      <div className="">
         {/* ------------------ TABS ------------------ */}
         <div
           ref={containerRef}

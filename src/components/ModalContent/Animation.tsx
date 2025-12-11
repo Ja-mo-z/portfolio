@@ -1,44 +1,55 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import VideoShowcaseTab from "./VideoShowcaseTemplate";
-import VideoShowcaseTemplate from "./VideoShowcaseTemplate";
+import TemplateShowcase from "./TemplateShowcase";
 
 export default function Animation() {
-  const tools = [
-    "Procreate",
-    "Premiere Pro",
-    "After Effects",
-    "Illustrator",
-    "Photoshop",
-    "Davinci Resolve",
-  ];
-  const videos = [
+  const tabData = [
     {
-      id: 0,
-      title: "Fibarcode Product Video",
-      description:
-        "Short description of the first video project. Explore the Design Planet to see more of my work with Fibarcode! ",
-      ytId: "bTZkqVq29wQ",
+      name: "Finished",
+      // title: "Finished Animation Projects",
+      tools: [
+        "Procreate",
+        "Premiere Pro",
+        "After Effects",
+        "Illustrator",
+
+        "Davinci Resolve",
+      ],
+      videos: [
+        {
+          id: 0,
+          title: "Fibarcode Product Video",
+          description:
+            "Short description of the first video project. Explore the Design Planet to see more of my work with Fibarcode!",
+          embedUrl: "https://www.youtube.com/embed/bTZkqVq29wQ",
+        },
+        {
+          id: 1,
+          title: "Just Keep Swimming",
+          description: "Short description of the second video project.",
+          embedUrl: "https://www.youtube.com/embed/WHz7r5i27os",
+        },
+        {
+          id: 2,
+          title: "Golden Shovel Agency Animated Logo",
+          description: "Short description of the third video project.",
+          embedUrl: "https://www.youtube.com/embed/xhZO8VmhIwE",
+        },
+      ],
     },
     {
-      id: 1,
-      title: "Just Keep Swimming",
-      description: "Short description of the second video project.",
-      ytId: "WHz7r5i27os",
-    },
-    {
-      id: 2,
-      title: "Golden Shovel Agency Animated Logo",
-      description: "Short description of the third video project.",
-      ytId: "xhZO8VmhIwE",
-    },
-    {
-      id: 3,
-      title: "Morphing Shapes",
-      description: "Short description of the third video project.",
-      ytId: "dTg96kWUarA",
+      name: "Experimenting",
+      // title: "Experimental Animation Projects",
+      tools: ["After Effects", "Moho", "Photoshop"],
+      videos: [
+        {
+          id: 3,
+          title: "Morphing Shapes",
+          description: "Short description of the fourth video project.",
+          embedUrl: "https://www.youtube.com/embed/dTg96kWUarA",
+        },
+        // Add more experimental videos here if you have them
+      ],
     },
   ];
 
-  return <VideoShowcaseTemplate tools={tools} videos={videos} />;
+  return <TemplateShowcase tabData={tabData} />;
 }

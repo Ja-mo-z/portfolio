@@ -32,7 +32,7 @@ export default function Ambient() {
     <div className="z-[9999] fixed bottom-4 right-4">
       <button
         onClick={isPlaying ? disableSound : enableSound}
-        className=" py-1 rounded shadow  size-8 flex items-center justify-center"
+        className=" py-1 rounded shadow  size-7 flex items-center justify-center"
       >
         {isPlaying ? <img src={VolumeOn} /> : <img src={VolumeOff} />}
       </button>

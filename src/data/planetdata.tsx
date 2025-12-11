@@ -13,7 +13,7 @@ import XRPlanet from "../assets/planets/XR_Planet.png";
 import Sparkle from "../assets/Sparkle.png";
 
 // Import all tab contents (for Vite to bundle them correctly)
-import AboutTab from "../components/ModalContent/About/AboutTab";
+import AboutTab from "../components/ModalContent/About";
 import XR from "../components/ModalContent/XR";
 import Animation from "../components/ModalContent/Animation";
 import FilmVideo from "../components/ModalContent/FilmVideo";

@@ -98,12 +98,14 @@ export default function Planet({
               width: Math.min(screenW * 0.4, 400),
               height: Math.min(screenH * 0.5, 300),
             }}
-            className="bg-white/10 backdrop-blur-lg text-white rounded-t-lg rounded-b-lg overflow-y-auto "
+            className="w-80 max-h-[60vh] overflow-auto
+                 bg-white/20 backdrop-blur-xl rounded-xl shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Top title bar */}
             <div
               className="sticky top-0 z-20 flex justify-between items-center 
-             bg-black/70 backdrop-blur-lg p-2 rounded-t-md"
+                      bg-white/10 backdrop-blur-md rounded-t-xl px-4 py-2"
             >
               <h3 className="font-semibold text-sm">{title}</h3>
               <button
@@ -116,7 +118,9 @@ export default function Planet({
                 ×
               </button>
             </div>
-            <div>{content}</div>
+
+            {/* Modal content */}
+            <div className="p-4">{content}</div>
           </motion.div>
         )}
       </AnimatePresence>
