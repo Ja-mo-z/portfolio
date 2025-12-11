@@ -37,6 +37,7 @@
 import Desktop from "./components/Desktop";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
+import RocketCursor from "rocket-cursor-component";
 
 export default function App() {
   return (
@@ -48,6 +49,7 @@ export default function App() {
       <div className="relative z-10">
         <Desktop />
       </div>
+      <RocketCursor size={20} />
     </div>
   );
 }

@@ -63,7 +63,7 @@ export default function Planet({
           className={`object-contain select-none`}
           draggable={false}
           animate={{
-            filter: "drop-shadow(0 0 32px rgba(255, 255, 255, 0.6))",
+            filter: "drop-shadow(0 0 16px rgba(255, 255, 255, 0.4))",
             rotate: shouldRotate ? 360 : 0,
           }}
           transition={{
