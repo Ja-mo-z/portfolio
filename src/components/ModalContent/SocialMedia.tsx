@@ -21,6 +21,11 @@ import CLAWSLead9 from "@/assets/social_media/CLAWS Subteam Leads/IMG_2476.png";
 import CLAWSLead10 from "@/assets/social_media/CLAWS Subteam Leads/IMG_2477.png";
 import CLAWSLead11 from "@/assets/social_media/CLAWS Subteam Leads/IMG_2478.png";
 
+// Golden Shovel
+import GS1 from "@/assets/social_media/Golden Shovel/1.png";
+import GSWebinar from "@/assets/social_media/Golden Shovel/Innovation for the future webinar.png";
+import GSTourism from "@/assets/social_media/Golden Shovel/Tourism Strategies Infographic.png";
+
 export default function SocialMedia() {
   const CLAWSBoard = [
     { id: 1, imgSrc: CLAWSBoard1, title: "1" },
@@ -43,6 +48,12 @@ export default function SocialMedia() {
     { id: 9, imgSrc: CLAWSLead9, title: "Lead 9" },
     { id: 10, imgSrc: CLAWSLead10, title: "Lead 10" },
     { id: 11, imgSrc: CLAWSLead11, title: "Lead 11" },
+  ];
+
+  const GoldenShovelImages = [
+    { id: 1, imgSrc: GS1, title: "Promo Graphic 1" },
+    { id: 2, imgSrc: GSWebinar, title: "Innovation for the Future Webinar" },
+    { id: 3, imgSrc: GSTourism, title: "Tourism Strategies Infographic" },
   ];
 
   const tabData = [
@@ -121,6 +132,37 @@ export default function SocialMedia() {
     {
       name: "Golden Shovel",
       //   tools: ["Canva"],
+      subheading: (
+        <div>
+          <p>
+            <i>
+              {" "}
+              <b>Golden Shovel Agency</b>{" "}
+            </i>
+            is a marketing and communications firm dedicated to economic
+            development.
+          </p>
+          <br />
+          <p>
+            Under my marketing internship, I created promotional videos,
+            graphics, and social posts published across LinkedIn, Meta, and X. I
+            also helped grow the company’s LinkedIn following by about 100
+            through consistent posting, joining relevant discussion groups, and
+            inviting connections to follow the page.
+          </p>
+          <div className="border-t-1 border-white/70 my-2" />
+        </div>
+      ),
+      images: [
+        {
+          id: 0,
+          title: "A Selection of Golden Shovel Social Media Graphics",
+          imgSrc: <Carousel images={GoldenShovelImages} />,
+
+          height: 256,
+          width: 256,
+        },
+      ],
     },
   ];
   return <MediaShowcase tabData={tabData} />;

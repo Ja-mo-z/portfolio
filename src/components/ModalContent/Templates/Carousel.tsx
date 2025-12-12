@@ -43,24 +43,26 @@ export default function ImageCarousel({
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
           transition={{ duration: 0.4 }}
+          className="flex items-center justify-center w-full h-full"
         >
           {images[currentIndex].link ? (
             <a
               href={images[currentIndex].link}
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center justify-center w-full h-full"
             >
               <img
                 src={images[currentIndex].imgSrc}
                 alt={images[currentIndex].title ?? ""}
-                className="w-full h-full object-cover rounded-md"
+                className="max-w-full max-h-full object-contain rounded-md"
               />
             </a>
           ) : (
             <img
               src={images[currentIndex].imgSrc}
               alt={images[currentIndex].title ?? ""}
-              className="w-full h-full object-cover rounded-md"
+              className="max-w-full max-h-full object-contain rounded-md"
             />
           )}
         </motion.div>
