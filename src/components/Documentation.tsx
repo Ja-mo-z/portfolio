@@ -125,6 +125,7 @@ export default function Documentation({ size }: { size: number }) {
                 <li>Accessibility improvements</li>
                 <li>Recreate icons in my own style</li>
                 <li>Clean up the codebase</li>
+                <li>Make the dancing Sparkle on beat with the music</li>
               </ul>
 
               <p className="text-white/80">

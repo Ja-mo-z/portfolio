@@ -67,7 +67,7 @@ export const planets: PlanetType[] = [
   },
   {
     id: "social",
-    title: "Social Media Marketing",
+    title: "Social Media & Marketing",
     size: 0.075,
     icon: SocialMediaPlanet,
     position: { x: 0.25, y: 0.65 },
