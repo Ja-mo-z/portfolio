@@ -41,7 +41,7 @@ export default function Planet({
         setIsDragging(true);
         onFocus && onFocus();
       }}
-      onDragEnd={(e, info) => {
+      onDragEnd={(_, info) => {
         setIsDragging(false);
         onMove &&
           onMove({

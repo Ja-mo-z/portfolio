@@ -35,8 +35,8 @@
 // import { ShootingStars } from "@/components/ui/shooting-stars";
 
 import Desktop from "./components/Desktop";
-import { ShootingStars } from "@/components/ui/shooting-stars";
-import { StarsBackground } from "@/components/ui/stars-background";
+import { ShootingStars } from "./components/ui/shooting-stars";
+import { StarsBackground } from "./components/ui/stars-background";
 import RocketCursor from "rocket-cursor-component";
 import DesktopWarning from "./components/DesktopWarning";
 

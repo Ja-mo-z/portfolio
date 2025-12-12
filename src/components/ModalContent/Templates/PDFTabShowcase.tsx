@@ -1,5 +1,5 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 // import external_link from "../../assets/icons/external_link.svg";
 
 export interface PDFDocument {

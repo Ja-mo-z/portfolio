@@ -15,8 +15,8 @@ export default function Greetings() {
   }, []);
 
   const easternTime = currentTime.format("LLLL");
-  const [day, date, timeYear] = easternTime.split(", ");
-  const [year, time, pm_am] = timeYear.split(" ");
+  const [_, date, timeYear] = easternTime.split(", ");
+  const [__, time, pm_am] = timeYear.split(" ");
 
   return (
     <div className="text-center fixed top-10 left-0 w-full p-4 text-white">

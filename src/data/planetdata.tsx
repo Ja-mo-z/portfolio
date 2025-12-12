@@ -1,6 +1,5 @@
 // static planet info
 import type { PlanetType } from "../types/planet";
-import { motion } from "motion/react";
 
 // Import all icons (for Vite to bundle them correctly)
 import WritingPlanet from "../assets/planets/Writing_Planet.png";

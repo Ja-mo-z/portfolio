@@ -42,7 +42,6 @@ import A2_TechTalk from "@/assets/social_media/A2tech/Tech Talk - Brandon Tucker
 import Accumtech from "@/assets/social_media/A2tech/Accumtech.png";
 import Arka from "@/assets/social_media/A2tech/Arka.png";
 import Cahoots from "@/assets/social_media/A2tech/Cahoots.png";
-import { desc } from "framer-motion/client";
 
 export default function SocialMedia() {
   // CLAWS Images

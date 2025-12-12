@@ -4,14 +4,11 @@ import HoverZoom from "./Templates/HoverZoom";
 
 // Individual images
 import AndyWarhog from "@/assets/design/graphic design/Andy Warhog.png";
-import CameraBasics from "@/assets/design/graphic design/Camera Basics.png";
-import Debugged from "@/assets/design/graphic design/debugged.png";
 import Finalfeesh2 from "@/assets/design/graphic design/Finalfeesh2.png";
 import DragonFruitShirt from "@/assets/design/graphic design/Dragon Fruit Shirt.png";
 import FishShirt from "@/assets/design/graphic design/JamieZhou_fishshirt.jpg";
 import Salt from "@/assets/design/graphic design/salt.png";
 import ShapeWomanShirt from "@/assets/design/graphic design/ShapeWomanShirt.png";
-import Tide from "@/assets/design/graphic design/tide.png";
 
 // Mango images for carousel
 import Mango1 from "@/assets/design/graphic design/Mango City 1.png";
@@ -78,7 +75,6 @@ const FibarcodePrototype = [
 ];
 // Fibarcode static images
 import FBarcode from "@/assets/design/Fibarcode/fibarcode barcode.png";
-import FOrigin from "@/assets/design/Fibarcode/Fibarcode Origin.png";
 import FRotated from "@/assets/design/Fibarcode/Rotated logos.png";
 import FBOutlines from "@/assets/design/Fibarcode/Frame 15.png";
 import FBLogo from "@/assets/design/Fibarcode/fibarcode_logo.jpeg";

@@ -1,4 +1,4 @@
-import TemplateShowcase, { type Video } from "./Templates/MediaShowcase";
+import TemplateShowcase from "./Templates/MediaShowcase";
 
 export default function FilmVideo() {
   const tabData = [
