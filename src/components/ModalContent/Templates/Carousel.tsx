@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import HoverZoom from "./HoverZoom";
 
 export interface CarouselItem {
   id: number;
@@ -7,6 +8,7 @@ export interface CarouselItem {
   title?: string;
   description?: string;
   link?: string;
+  hoverZoom?: boolean;
 }
 
 interface CarouselProps {
@@ -58,6 +60,8 @@ export default function ImageCarousel({
                 className="max-w-full max-h-full object-contain rounded-md"
               />
             </a>
+          ) : images[currentIndex].hoverZoom ? (
+            <HoverZoom src={images[currentIndex].imgSrc} />
           ) : (
             <img
               src={images[currentIndex].imgSrc}

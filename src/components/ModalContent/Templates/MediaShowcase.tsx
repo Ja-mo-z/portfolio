@@ -135,8 +135,8 @@ export default function TemplateShowcase({ tabData }: ShowcaseProps) {
                     className="rounded-md w-full object-cover"
                     // alt={img.title}
                     style={{
-                      height: img.height ?? "250px",
-                      width: img.width ?? "auto",
+                      height: img.height ?? "auto",
+                      width: img.width ?? "80%",
                     }}
                   />
                 ) : (
