@@ -13,7 +13,7 @@ export default function Documentation({ size }: { size: number }) {
         alt="Help Icon"
         style={{ width: size, height: size }}
         className="fixed bottom-3 right-16 z-[9999] cursor-pointer select-none"
-        onClick={() => setIsOpen(true)}
+        onClick={() => setIsOpen(!isOpen)}
       />
 
       <AnimatePresence>

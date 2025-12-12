@@ -115,7 +115,7 @@ export default function SocialMedia() {
         <div>
           <p>
             <i>
-              <b>Ann Arbor SPARK’s a2Tech360 </b>
+              <b className="text-sky-200">Ann Arbor SPARK’s a2Tech360 </b>
             </i>{" "}
             is a weeklong series of events that showcases the region’s
             innovative spirit through experiences, discussions, and networking
@@ -176,7 +176,7 @@ export default function SocialMedia() {
           <p>
             <i>
               {" "}
-              <b>CLAWS</b>{" "}
+              <b className="text-sky-200">CLAWS</b>{" "}
             </i>
             is an interdisciplinary team at the University of Michigan that
             builds augmented reality interfaces for astronauts.
@@ -195,11 +195,7 @@ export default function SocialMedia() {
           id: 0,
           title: "Introduction to CLAWS Board",
           imgSrc: <Carousel images={CLAWSBoard} />,
-          description: (
-            <div>
-              <br />
-            </div>
-          ),
+
           height: 256,
           width: 256,
         },
@@ -209,9 +205,6 @@ export default function SocialMedia() {
           imgSrc: <Carousel images={CLAWSSubteamLeads} />,
           description: (
             <div>
-              <br />
-              <div className="border-t-1 border-white/70 my-2" />
-
               <p>
                 I also established our weekly Instagram takeovers, which boosted
                 engagement and strengthened our connection with prospective and
@@ -245,7 +238,7 @@ export default function SocialMedia() {
           <p>
             <i>
               {" "}
-              <b>Golden Shovel Agency</b>{" "}
+              <b className="text-sky-200">Golden Shovel Agency</b>{" "}
             </i>
             is a marketing and communications firm dedicated to economic
             development.
