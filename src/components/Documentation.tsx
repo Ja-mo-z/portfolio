@@ -146,8 +146,7 @@ export default function Documentation({ size }: { size: number }) {
               <div className="border-t-1 border-white/70 my-2" />
 
               <p className="text-white/60" style={{ fontSize: "0.5rem" }}>
-                As of December 2025, future developments will be slow as I focus
-                on finding a job. 💪🙂
+                Last updated: December 2025
               </p>
             </div>
           </motion.div>

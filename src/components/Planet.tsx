@@ -97,11 +97,10 @@ export default function Planet({
               left: "50%",
               transform: "translateX(-50%)",
               zIndex: (zIndex ?? 1000) + 1,
-              width: Math.min(screenW * 0.4, 400),
-              height: Math.min(screenH * 0.5, 300),
+              width: Math.min(screenW * 0.5, 400),
+              height: Math.min(screenH * 0.6, 400),
             }}
-            className="w-90 max-h-[70vh] overflow-auto
-                 bg-white/20 backdrop-blur-xl rounded-xl shadow-xl"
+            className="overflow-auto bg-white/20 backdrop-blur-xl rounded-xl shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Top title bar */}
