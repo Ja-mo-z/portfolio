@@ -23,7 +23,6 @@ import doodle3 from "../../assets/art/doodles/IMG_3313.jpg";
 import doodle4 from "../../assets/art/doodles/IMG_3314.jpg";
 import doodle5 from "../../assets/art/doodles/IMG_3315.jpg";
 import doodle6 from "../../assets/art/doodles/IMG_3317.jpg";
-import { hover } from "framer-motion";
 
 export default function Art() {
   const tabData = [
