@@ -23,9 +23,19 @@ const MangoCarousel = [
 
 // Shirts
 const shirts = [
-  { id: 1, imgSrc: DragonFruitShirt, title: "Dragon Fruit Shirt" },
-  { id: 2, imgSrc: FishShirt, title: "Fish Shirt" },
-  { id: 3, imgSrc: ShapeWomanShirt, title: "Shape Woman Shirt" },
+  {
+    id: 1,
+    imgSrc: DragonFruitShirt,
+    title: "Dragon Fruit Shirt",
+    hoverZoom: true,
+  },
+  { id: 2, imgSrc: FishShirt, title: "Fish Shirt", hoverZoom: true },
+  {
+    id: 3,
+    imgSrc: ShapeWomanShirt,
+    title: "Shape Woman Shirt",
+    hoverZoom: true,
+  },
 ];
 
 // Film Noir images
