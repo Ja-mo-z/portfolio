@@ -120,7 +120,7 @@ export default function AboutTab() {
           </div>
           <ul className="list-disc ml-5 space-y-1 text-white/80">
             <li>Creative, collaborative teams</li>
-            <li>Punctuality and communication</li>
+            <li>Punctuality and clear communication</li>
             <li>Dark chocolate</li>
             <li>Tasty snacks</li>
             <li>Good food</li>

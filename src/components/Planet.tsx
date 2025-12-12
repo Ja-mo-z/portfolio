@@ -72,6 +72,8 @@ export default function Planet({
             ease: "linear",
             delay: rotationDelay,
           }}
+          // onClick={()=>setIsOpen(!isOpen)}
+          // ^^ have to assign z-index to planet that's above it's modal for this to work
         />
         {!isOpen && (
           <div className="text-sm mt-1 max-w-32 text-center select-none">

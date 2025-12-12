@@ -19,8 +19,26 @@ export default function Animation() {
         {
           id: 0,
           title: "Fibarcode Product Video",
-          description:
-            "Short description of the first video project. Explore the Design Planet to see more of my work with Fibarcode!",
+          description: (
+            <div className="h-24 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
+              <p>
+                Fibarcode is a startup founded by Brian Iezzi that’s trying to
+                make labels and textiles more sustainable using photonic fibers
+                as permanent barcodes. During this project, I looked at a lot of
+                Apple and Google commercials, and had to deal with my computer
+                buffering and wheezing as it tried to keep up with the motion
+                graphics.{" "}
+              </p>
+              <p>
+                Brian gave me a lot of creative freedom – which I’m super
+                grateful for – and I built everything from scratch using
+                Illustrator, After Effects, and Premiere Pro.
+              </p>
+              <p>
+                Explore the Design Planet to see more of my work with Fibarcode!
+              </p>
+            </div>
+          ),
           embedUrl: "https://www.youtube.com/embed/Cbr8IiMHhyE ",
         },
         {

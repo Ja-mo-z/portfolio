@@ -1,5 +1,6 @@
 import MediaShowcase from "./Templates/MediaShowcase";
 import Carousel from "./Templates/Carousel";
+import HoverZoom from "./Templates/HoverZoom";
 
 // Individual images
 import AndyWarhog from "@/assets/design/graphic design/Andy Warhog.png";
@@ -80,6 +81,8 @@ import FBarcode from "@/assets/design/Fibarcode/fibarcode barcode.png";
 import FOrigin from "@/assets/design/Fibarcode/Fibarcode Origin.png";
 import FRotated from "@/assets/design/Fibarcode/Rotated logos.png";
 import FBOutlines from "@/assets/design/Fibarcode/Frame 15.png";
+import FBLogo from "@/assets/design/Fibarcode/fibarcode_logo.jpeg";
+import FBOldLogo from "@/assets/design/Fibarcode/OldLogo.png";
 
 // CLAWS
 import Vitals from "@/assets/design/Web/CLAWS/Vitals.jpg";
@@ -103,57 +106,122 @@ export default function Design() {
       tools: ["Inkscape", "Figma", "Adobe Color"],
       subheading: (
         <div>
+          <p className="text-indigo-200 font-bold text-sm mb-2">Fibarcode</p>
           <p>
-            This was what I started with: a single slide of inspiration,
-            provided by the founder.
+            Fibarcode is a startup, founded by Brian Iezzi, that's trying to
+            make labels and textiles more sustainable using photonic fibers as
+            permanent barcodes.
           </p>
-          <p>
-            I led a full brand and content build for Fibarcode, creating the
-            visual identity, messaging, logo, brand guidelines, and a product
-            video—all within a fast-paced 90-hour turnaround. My goal was to
-            clarify their product story across web and social while establishing
-            a cohesive, memorable brand.
-          </p>
-          <p>
-            For the logo, I explored concepts rooted in textiles, technology,
-            and sustainability. The final design combines fiber strands and
-            barcode elements through simplified linework. I iterated on line
-            density, spacing, and form—aligning three segments into a structure
-            inspired by a fabric cross-section, adding a slight tilt for energy,
-            and softening the design with rounded line ends.
-          </p>
-          <p>
-            To improve product clarity, I proposed visually splitting the name
-            as Fibar-code, highlighting the “fiber” aspect. The identity uses a
-            black-and-white base with warm reds and oranges added per the
-            founder’s request. I also created a brand guide covering color
-            usage, typography (Lovelo paired with Noto Sans), and layout
-            principles.
-          </p>
+
           <div className="border-t-1 border-white/70 my-2" />
         </div>
       ),
       images: [
         {
-          id: 2,
-          title: "Fibarcode Barcode",
-          imgSrc: FBarcode,
+          id: 3,
+
+          imgSrc: FBOldLogo,
+          height: 80,
+          description: (
+            <div>
+              <p>
+                I started with: the old logo and a brief description of the
+                product.
+              </p>
+              <br />
+              <p>
+                Eventually, I led a full brand and content build for Fibarcode,
+                creating the visual identity, messaging, logo, brand guidelines,
+                and a product video — all within a fast-paced 90-hour
+                turnaround. Explore the Animation planet to see the product
+                video!
+              </p>
+            </div>
+          ),
         },
         {
-          id: 3,
-          title: "Fibarcode Origin",
-          imgSrc: FOrigin,
+          id: 2,
+
+          description: (
+            <div>
+              <p>
+                To redesign the logo, I explored concepts rooted in textiles,
+                technology, and sustainability. I eventually decided on building
+                the logo up from an actual barcode.
+              </p>
+            </div>
+          ),
+          imgSrc: FBarcode,
+          height: 80,
         },
+
         {
           id: 4,
-          title: "Rotated Logos",
-          imgSrc: FRotated,
+          imgSrc: <HoverZoom src={FRotated} width="300px" height="150px" />,
+          description: (
+            <div>
+              <p>
+                I took sections of the barcode and experimented with rotating
+                the logo to create dynamic compositions that suggest movement
+                and adaptability, reflecting the innovative nature of
+                Fibarcode's technology.
+              </p>
+            </div>
+          ),
+          //   height: 200,
         },
-        { id: 5, imgSrc: FBOutlines },
+        {
+          id: 6,
+          imgSrc: FBLogo,
+          height: 80,
+          description: (
+            <div>
+              <p>
+                The final design combines fiber strands and barcode elements
+                through simplified linework. I iterated on line density,
+                spacing, and form. I settled on a clean, modern look with the
+                minimal of three lines per section.
+              </p>
+              <br />
+              <p>
+                I aligned those three segments into a structure inspired by a
+                fabric cross-section, adding a slight tilt for energy and
+                softening the design by rounding the ends of the lines.
+              </p>
+            </div>
+          ),
+        },
+        {
+          id: 5,
+          imgSrc: <HoverZoom src={FBOutlines} width="300px" height="150px" />,
+          //   imgSrc: (
+          //     <img src={FBOutlines} style={{ height: "auto", width: "auto" }} />
+          //   ),
+          description: (
+            <div>
+              <p>
+                As for the text, I proposed visually splitting the name as
+                Fibar-code, highlighting the “fiber” and "code" aspects on each
+                side. The identity uses a black-and-white base to reflect the
+                "barcode" concept.
+              </p>
+            </div>
+          ),
+        },
         {
           id: 1,
           title: "Fibarcode Brand Guidelines",
           imgSrc: <Carousel images={FibarcodePrototype} />,
+          description: (
+            <div>
+              I then created a comprehensive brand guide covering color usage,
+              typography (Lovelo paired with Noto Sans), and layout principles.
+              Early explorations tested gradients vs. solids, organic vs.
+              structured forms, and varying line styles. I ultimately landed on
+              short, curved lines that echo the logo while adding visual
+              contrast.
+            </div>
+          ),
           width: 400,
           height: 250,
         },
@@ -161,7 +229,7 @@ export default function Design() {
     },
 
     {
-      name: "Graphic Design",
+      name: "Graphic",
       tools: ["Illustrator", "Procreate", "Canva"],
 
       subheading: (
