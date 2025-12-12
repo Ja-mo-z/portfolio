@@ -43,9 +43,9 @@ const tabs = [
             <p>
               In <strong>“Start of a World”</strong>, I wanted to twist the
               common trope of trying to prevent the end of the world into trying
-              to prevent the start of one. The God in “Start of a World” wants
-              to break out of the cycle of rebirth and redeath, while the planet
-              desperately wants to live again.
+              to prevent the start of one. The God in “The Start of a World”
+              wants to break out of the cycle of rebirth and redeath, while the
+              planet desperately wants to live again.
             </p>
             <p>
               This was based on{" "}
@@ -79,7 +79,7 @@ const tabs = [
               wedding. It’s been more than five years, though, so I’ve forgotten
               the actual plot. I briefly skimmed through it before putting it
               here, and I can confidently tell you that as a 16 year old, I was
-              really really.
+              really really ...
             </p>
             <p>... not Mary Shelley.</p>
             <p>
