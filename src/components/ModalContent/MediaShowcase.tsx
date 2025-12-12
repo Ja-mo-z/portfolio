@@ -1,11 +1,11 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
 import { motion } from "motion/react";
 
-export interface PDFDocument {
+export interface Image {
   id: number;
-  title: string;
-  description: string | React.ReactElement;
-  url: string;
+  title?: string;
+  description?: string | React.ReactElement;
+  imgSrc: string;
 }
 
 export interface Video {
@@ -20,7 +20,7 @@ interface TabSection {
   name?: string; // If undefined → no tabs
   title?: string; // Section header
   tools?: string[];
-  documents?: PDFDocument[];
+  images?: Image[];
   videos?: Video[];
 }
 
@@ -50,13 +50,13 @@ export default function TemplateShowcase({ tabData }: ShowcaseProps) {
   }, [tabData.length, hasTabs]);
 
   const active = tabData[hasTabs ? activeTab : 0];
-  const docs = active.documents ?? [];
+  const images = active.images ?? [];
   const videos = active.videos ?? [];
   const tools = active.tools ?? [];
 
   return (
     <div className="relative w-full max-w-md p-3 text-white text-sm">
-      <div className="">
+      <div>
         {/* ---------------- TABS (conditional) ---------------- */}
         {hasTabs && (
           <div
@@ -114,26 +114,31 @@ export default function TemplateShowcase({ tabData }: ShowcaseProps) {
 
         {/* ---------------- CONTENT LIST ---------------- */}
         <div className="space-y-6">
-          {/* PDFs */}
-          {docs.map((doc) => (
+          {/* Images */}
+          {images.map((img, i) => (
             <motion.div
-              key={doc.id}
-              initial={{ opacity: 0, y: 10 }}
+              key={img.id}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="cursor-pointer bg-black/30 p-2 rounded-md hover:bg-black/50"
-              onClick={() => window.open(doc.url, "_blank")}
+              transition={{ duration: 0.35, delay: i * 0.08 }}
             >
-              <div className="font-semibold text-indigo-200 hover:text-white flex items-center gap-2">
-                {doc.title}
+              <div className="overflow-hidden rounded-md flex justify-center items-center">
+                <img
+                  src={img.imgSrc}
+                  className="rounded-md w-full object-cover"
+                  alt={img.title}
+                  style={{ height: "250px", width: "auto" }}
+                />
               </div>
 
-              <div className="mt-1 text-xs text-white/70 bg-white/5 p-2 rounded-md">
-                {doc.description}
+              <div className="mt-2">
+                <div className="font-semibold text-indigo-200">{img.title}</div>
+                <div className="text-white/70 text-xs mt-1">
+                  {img.description}
+                </div>
               </div>
             </motion.div>
           ))}
-
           {/* Videos */}
           {videos.map((v, i) => (
             <motion.div

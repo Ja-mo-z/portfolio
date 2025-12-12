@@ -2,7 +2,7 @@
 // import { motion, AnimatePresence } from "motion/react";
 // import VideoShowcaseTab from "./VideoShowcaseTemplate";
 // import VideoShowcaseTemplate from "./VideoShowcaseTemplate";
-import TemplateShowcase from "./TemplateShowcase";
+import TemplateShowcase from "./MediaShowcase";
 
 export default function XR() {
   const tabData = [

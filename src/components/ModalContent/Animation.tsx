@@ -1,4 +1,4 @@
-import TemplateShowcase from "./TemplateShowcase";
+import TemplateShowcase from "./MediaShowcase";
 import GoldenShovelGif from "/videos/GoldenShovel.gif";
 import MorphingShapesMp4 from "/videos/MorphingShapes.mp4";
 import TitleMGPractice from "/videos/TitleMG.mp4";
