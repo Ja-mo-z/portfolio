@@ -246,8 +246,12 @@ export default function SocialMedia() {
           <br />
           <p>
             Under my marketing internship, I created promotional videos,
-            graphics, and social posts published across LinkedIn, Meta, and X. I
-            also helped grow the company’s LinkedIn following by about 100
+            graphics, and social posts published across LinkedIn, Meta, and X.{" "}
+          </p>
+          <br />
+
+          <p>
+            I also helped grow the company’s LinkedIn following by about 100
             through consistent posting, joining relevant discussion groups, and
             inviting connections to follow the page.
           </p>
