@@ -81,6 +81,16 @@ export default function Documentation({ size }: { size: number }) {
                 </li>
                 <li>
                   <a
+                    href="https://socket.dev/npm/package/rocket-cursor-component "
+                    className="underline hover:text-blue-400 "
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Rocket cursor
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://www.epidemicsound.com/music/tracks/7dcbeeae-9cc6-42c6-bf09-a523c2e2cd2e/"
                     className="underline hover:text-blue-400"
                     target="_blank"
