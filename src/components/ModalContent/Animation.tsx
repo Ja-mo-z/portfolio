@@ -1,5 +1,7 @@
 import TemplateShowcase from "./TemplateShowcase";
-
+import GoldenShovelGif from "/videos/GoldenShovel.gif";
+import MorphingShapesMp4 from "/videos/MorphingShapes.mp4";
+import TitleMGPractice from "/videos/TitleMG.mp4";
 export default function Animation() {
   const tabData = [
     {
@@ -31,8 +33,7 @@ export default function Animation() {
               feeling of hopelessness—the girl gets in the pool and follows the
               jellyfish deeper despite knowing she shouldn’t. The jellyfish
               symbolizes a dangerous comfort, luring her (and others) into the
-              darkness. While this is my interpretation, the meaning is
-              ultimately open to the viewer!
+              darkness.
             </div>
           ),
           embedUrl: "https://www.youtube.com/embed/mxWIG3HSp0Q",
@@ -41,7 +42,7 @@ export default function Animation() {
           id: 2,
           title: "Golden Shovel Agency Animated Logo",
           description: "A short motion graphic for Golden Shovel’s podcasts.",
-          embedUrl: "https://www.youtube.com/embed/xhZO8VmhIwE",
+          videoSrc: GoldenShovelGif,
         },
       ],
     },
@@ -54,7 +55,13 @@ export default function Animation() {
           id: 3,
           title: "Morphing Shapes",
           description: "Made with After Effects.",
-          embedUrl: "https://www.youtube.com/embed/dTg96kWUarA",
+          videoSrc: MorphingShapesMp4,
+        },
+        {
+          id: 6,
+          title: "Title Animation",
+          description: "Made with After Effects.",
+          videoSrc: TitleMGPractice,
         },
         {
           id: 4,
@@ -67,12 +74,6 @@ export default function Animation() {
           title: "Character Animation",
           description: "Made with Moho.",
           embedUrl: "https://www.youtube.com/embed/lbXoTctF-_E",
-        },
-        {
-          id: 6,
-          title: "Title Animation",
-          description: "Made with After Effects.",
-          embedUrl: "https://www.youtube.com/embed/dTg96kWUarA",
         },
       ],
     },

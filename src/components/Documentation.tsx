@@ -115,16 +115,16 @@ export default function Documentation({ size }: { size: number }) {
                 Future developments
               </p>
               <ul className="list-disc ml-5 text-white/80 space-y-1">
-                <li>Improving the scrolling experience in the planet modals</li>
+                <li>Improve the scrolling experience in the planet modals</li>
                 <li>
-                  Introducing the capability to enlarge pictures or videos
-                  within the website
+                  Introduce the capability to enlarge pictures or videos within
+                  the website
                 </li>
-                {/* <li>Making the modals more stylized</li> */}
+                {/* <li>Make the modals more stylized</li> */}
                 <li>Light/dark mode</li>
                 <li>Accessibility improvements</li>
-                <li>Recreating icons in my own style</li>
-                {/* <li>Fixing some errors</li> */}
+                <li>Recreate icons in my own style</li>
+                <li>Clean up the codebase</li>
               </ul>
 
               <p className="text-white/80">

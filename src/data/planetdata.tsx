@@ -57,8 +57,8 @@ export const planets: PlanetType[] = [
     content: <FilmVideo />,
   },
   {
-    id: "graphic",
-    title: "Illustrations",
+    id: "art",
+    title: "Art",
     size: 0.085,
     icon: GraphicDesignPlanet,
     position: { x: 0.55, y: 0.55 },

@@ -152,13 +152,20 @@ export default function TemplateShowcase({ tabData }: ShowcaseProps) {
                     className="rounded-md w-full aspect-video"
                   />
                 )}
-                {v.videoSrc && (
-                  <video
-                    controls
-                    src={v.videoSrc}
-                    className="rounded-md w-full aspect-video"
-                  />
-                )}
+                {v.videoSrc &&
+                  (v.videoSrc.endsWith(".gif") ? (
+                    <img
+                      src={v.videoSrc}
+                      className="rounded-md w-full aspect-video object-cover"
+                      alt={v.title}
+                    />
+                  ) : (
+                    <video
+                      controls
+                      src={v.videoSrc}
+                      className="rounded-md w-full aspect-video"
+                    />
+                  ))}
               </div>
 
               <div className="mt-2">
