@@ -38,7 +38,7 @@ export const planets: PlanetType[] = [
     title: "Writing",
     icon: WritingPlanet,
     size: 0.15,
-    position: { x: 0.05, y: 0.6 },
+    position: { x: 0.03, y: 0.45 },
     content: <Writing />,
   },
   {

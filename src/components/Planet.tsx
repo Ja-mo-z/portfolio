@@ -98,7 +98,7 @@ export default function Planet({
               width: Math.min(screenW * 0.4, 400),
               height: Math.min(screenH * 0.5, 300),
             }}
-            className="w-80 max-h-[60vh] overflow-auto
+            className="w-90 max-h-[70vh] overflow-auto
                  bg-white/20 backdrop-blur-xl rounded-xl shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >

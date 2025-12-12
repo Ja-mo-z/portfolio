@@ -4,6 +4,21 @@ const tabs = [
     name: "Stories",
     documents: [
       {
+        id: 4,
+        title: "Why We Eat - WIP",
+        description: (
+          <div className="">
+            <p>
+              The first few pages of a story about a girl chasing an unreliable
+              hero, carried forward by her hunger — both literal and emotional —
+              as she searches for a place to belong. I want to explore themes of
+              greed, family, and misplaced obsession.{" "}
+            </p>
+          </div>
+        ),
+        url: "pdfs/Why We Eat.pdf",
+      },
+      {
         id: 0,
         title: "Had A Farm",
         description: (

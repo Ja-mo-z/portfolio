@@ -115,7 +115,10 @@ export default function Documentation({ size }: { size: number }) {
                 Future developments
               </p>
               <ul className="list-disc ml-5 text-white/80 space-y-1">
-                <li>Improve the scrolling experience in the planet modals</li>
+                <li>
+                  Improve the planet modals (appearance, resizability, and
+                  functionality)
+                </li>
                 <li>
                   Introduce the capability to enlarge pictures or videos within
                   the website

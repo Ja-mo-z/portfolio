@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export interface Image {
   id: number;
-  title?: string;
+  title?: string | React.ReactElement;
   description?: string | React.ReactElement;
   imgSrc: string | React.ReactElement;
   height?: number;
@@ -133,7 +133,7 @@ export default function TemplateShowcase({ tabData }: ShowcaseProps) {
                   <img
                     src={img.imgSrc}
                     className="rounded-md w-full object-cover"
-                    alt={img.title}
+                    // alt={img.title}
                     style={{
                       height: img.height ?? "250px",
                       width: img.width ?? "auto",

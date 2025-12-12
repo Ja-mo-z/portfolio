@@ -6,10 +6,10 @@ import AndyWarhog from "@/assets/design/graphic design/Andy Warhog.png";
 import CameraBasics from "@/assets/design/graphic design/Camera Basics.png";
 import Debugged from "@/assets/design/graphic design/debugged.png";
 import Finalfeesh2 from "@/assets/design/graphic design/Finalfeesh2.png";
-import JamieDragon from "@/assets/design/graphic design/JamieZhou_dragon.jpg";
-import JamieFish from "@/assets/design/graphic design/JamieZhou_fishshirt.jpg";
+import DragonFruitShirt from "@/assets/design/graphic design/Dragon Fruit Shirt.png";
+import FishShirt from "@/assets/design/graphic design/JamieZhou_fishshirt.jpg";
 import Salt from "@/assets/design/graphic design/salt.png";
-import ShapeWoman from "@/assets/design/graphic design/Shape Woman.png";
+import ShapeWomanShirt from "@/assets/design/graphic design/ShapeWomanShirt.png";
 import Tide from "@/assets/design/graphic design/tide.png";
 
 // Mango images for carousel
@@ -21,6 +21,13 @@ const MangoCarousel = [
   { id: 1, imgSrc: Mango1, title: "Mango City 1" },
   { id: 2, imgSrc: Mango2, title: "Mango City 2" },
   { id: 3, imgSrc: Mango3, title: "Mango City 3" },
+];
+
+// Shirts
+const shirts = [
+  { id: 1, imgSrc: DragonFruitShirt, title: "Dragon Fruit Shirt" },
+  { id: 2, imgSrc: FishShirt, title: "Fish Shirt" },
+  { id: 3, imgSrc: ShapeWomanShirt, title: "Shape Woman Shirt" },
 ];
 
 // Film Noir images
@@ -72,6 +79,23 @@ const FibarcodePrototype = [
 import FBarcode from "@/assets/design/Fibarcode/fibarcode barcode.png";
 import FOrigin from "@/assets/design/Fibarcode/Fibarcode Origin.png";
 import FRotated from "@/assets/design/Fibarcode/Rotated logos.png";
+import FBOutlines from "@/assets/design/Fibarcode/Frame 15.png";
+
+// CLAWS
+import Vitals from "@/assets/design/Web/CLAWS/Vitals.jpg";
+import VitalsWarning from "@/assets/design/Web/CLAWS/Vitals Warning and Notification.jpg";
+import VitalsWarning1 from "@/assets/design/Web/CLAWS/Vitals Warning and Notification-1.jpg";
+
+export const clawsImages = [
+  { id: 1, imgSrc: Vitals, title: "Vitals" },
+  { id: 2, imgSrc: VitalsWarning, title: "Vitals Warning & Notification" },
+  {
+    id: 3,
+    imgSrc: VitalsWarning1,
+    title: "Vitals Warning & Notification (Alt)",
+  },
+];
+
 export default function Design() {
   const tabData = [
     {
@@ -125,6 +149,7 @@ export default function Design() {
           title: "Rotated Logos",
           imgSrc: FRotated,
         },
+        { id: 5, imgSrc: FBOutlines },
         {
           id: 1,
           title: "Fibarcode Brand Guidelines",
@@ -137,6 +162,8 @@ export default function Design() {
 
     {
       name: "Graphic Design",
+      tools: ["Illustrator", "Procreate", "Canva"],
+
       subheading: (
         <div>
           <p>
@@ -147,22 +174,29 @@ export default function Design() {
         </div>
       ),
       images: [
-        { id: 1, imgSrc: AndyWarhog, title: "Andy Warhog" },
-        { id: 2, imgSrc: CameraBasics, title: "Camera Basics" },
-        { id: 3, imgSrc: Debugged, title: "Debugged" },
-        { id: 4, imgSrc: Finalfeesh2, title: "Finalfeesh2" },
-        { id: 5, imgSrc: JamieDragon, title: "Dragon Shirt" },
-        { id: 6, imgSrc: JamieFish, title: "Fish Shirt" },
+        { id: 4, imgSrc: Finalfeesh2 },
+
+        { id: 1, imgSrc: AndyWarhog },
+        // { id: 2, imgSrc: CameraBasics, title: "Camera Basics" },
+        // { id: 3, imgSrc: Debugged },
+
         {
           id: 7,
-          title: "Mango City Series",
+          //   title: "Mango City ",
+          description:
+            "A series of hypothetical logos for a hypothetical city.",
           imgSrc: <Carousel images={MangoCarousel} />,
           width: 256,
           height: 256,
         },
-        { id: 8, imgSrc: Salt, title: "Salt" },
-        { id: 9, imgSrc: ShapeWoman, title: "Shape Woman" },
-        { id: 10, imgSrc: Tide, title: "Tide" },
+        { id: 8, imgSrc: Salt },
+        {
+          id: 9,
+          description:
+            "Random shirt designs (dragon fruit heart, we are all fish, a woman made out of shapes).",
+          imgSrc: <Carousel images={shirts} />,
+        },
+        // { id: 10, imgSrc: Tide, title: "Tide" },
       ],
     },
     {
@@ -171,10 +205,82 @@ export default function Design() {
       images: [
         {
           id: 1,
-          title: "Film Noir Project",
+          title: (
+            <div
+              className="font-semibold text-indigo-200 hover:text-white hover:scale-101 transition-transform ease-in-out flex gap-2 items-center"
+              onClick={() =>
+                window.open(
+                  "https://aestheticofillegibility.framer.website/",
+                  "_blank",
+                  "noopener noreferrer"
+                )
+              }
+            >
+              Film Noir Website{" "}
+              <span className="inline-block ml-1 ">
+                <svg
+                  width="16px"
+                  height="16px"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                >
+                  <path
+                    fill="currentColor"
+                    fillRule="evenodd"
+                    d="M18.885 2a1 1 0 00-1-1h-6a1 1 0 100 2h3.586L9.178 9.293a1 1 0 101.414 1.414l6.293-6.293V8a1 1 0 102 0V2zM3.009 3a2.012 2.012 0 00-1.998 2.218c.148 1.453.374 3.978.374 5.782 0 1.746-.212 4.17-.36 5.642a2.028 2.028 0 002.218 2.218c1.473-.148 3.896-.36 5.642-.36 1.804 0 4.33.226 5.782.374a2.012 2.012 0 002.218-1.998V12a1 1 0 10-2 0v4.878l-.003.003a.018.018 0 01-.006.003h-.006c-1.451-.147-4.068-.384-5.985-.384-1.857 0-4.37.222-5.842.37h-.008a.034.034 0 01-.012-.008.033.033 0 01-.008-.012.01.01 0 010-.002v-.006c.148-1.473.37-3.985.37-5.842 0-1.917-.237-4.534-.385-5.985v-.006l.004-.006A.016.016 0 013.007 5h4.878a1 1 0 000-2H3.009z"
+                  />
+                </svg>
+              </span>
+            </div>
+          ),
+          description: (
+            <div>
+              I created the initial website concept and built page templates in
+              Framer, mapping out text placement, image structure, and key
+              visual effects. The client requested a Film Noir–inspired
+              aesthetic, so I focused on designs that conveyed mood, tension,
+              and intentional disorder. What you see above are a few of the
+              concepts I developed.
+            </div>
+          ),
           imgSrc: <Carousel images={FilmNoirCarousel} />,
           width: 400,
           height: 250,
+        },
+        {
+          id: 2,
+          imgSrc: <Carousel images={clawsImages} />,
+          title: "CLAWS Vitals Page Designs",
+          description: (
+            <div>
+              <p>
+                CLAWS is an interdisciplinary team at the University of Michigan
+                that builds augmented reality interfaces for astronauts.{" "}
+              </p>
+              <br />
+              <p>
+                I was a part of CLAWS for 3 years, and was on the Web, UI/UX,
+                and Content team respectively. When I was on the UI/UX team, I
+                designed the Vitals pages. What you see above are warnings,
+                notifications, and a normal view of the Vitals page.
+              </p>
+              <br />
+              <p>
+                My design process involved researching existing astronaut
+                interfaces, sketching wireframes, and iterating on visual
+                elements to ensure clarity and usability in high-stress
+                situations. Vitals that are related to each other are grouped
+                together, and the visual semi-circles and sparse use of colors
+                are meant to allow easy readability at a glance.
+              </p>
+              <br />
+              <p>
+                If you're interested in seeing more of my work with CLAWS,
+                explore the Social Media & Marketing and Film/Video planets!
+              </p>
+            </div>
+          ),
         },
       ],
     },
