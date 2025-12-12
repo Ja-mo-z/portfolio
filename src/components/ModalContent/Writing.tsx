@@ -100,7 +100,7 @@ const tabs = [
     documents: [
       {
         id: 0,
-        title: "Coloring Historical Pictures",
+        title: "Historical Image Colorization",
         description:
           "A research paper done on a method of converting black-and-white images into colored ones using neural networks.",
         url: "pdfs/442.pdf",
@@ -114,7 +114,7 @@ const tabs = [
       },
       {
         id: 2,
-        title: "Camera Basics",
+        title: "A Snapshot of the Camera",
         description:
           "An introductory guide to understanding the fundamental concepts and techniques of the Exposure Triangle.",
         url: "pdfs/camera_basics.pdf",
@@ -133,7 +133,7 @@ const tabs = [
     documents: [
       {
         id: 0,
-        title: "POP it, LOCK it",
+        title: "POP IT",
         description:
           "A hypothetical commercial for PopSocket written in AV script format.",
         url: "pdfs/PopIt.pdf",

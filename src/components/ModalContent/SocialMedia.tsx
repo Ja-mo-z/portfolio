@@ -144,7 +144,7 @@ export default function SocialMedia() {
           id: 1,
           title: "Speaker Promotions for BoLS Event",
           description:
-            "A selection of social media graphics created to promote the Business of Life Sciences speaker event. They were one of several companies to participate in a2tech260.",
+            "A selection of social media graphics created to promote the Business of Life Sciences. They were one of several companies to participate in a2tech260.",
           imgSrc: <Carousel images={A2TechBoLS} />,
           height: 256,
           width: 256,

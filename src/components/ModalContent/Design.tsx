@@ -124,17 +124,14 @@ export default function Design() {
           height: 80,
           description: (
             <div>
-              <p>
-                I started with: the old logo and a brief description of the
-                product.
-              </p>
+              <p>This was the old Fibarcode logo.</p>
               <br />
               <p>
-                Eventually, I led a full brand and content build for Fibarcode,
-                creating the visual identity, messaging, logo, brand guidelines,
-                and a product video — all within a fast-paced 90-hour
-                turnaround. Explore the Animation planet to see the product
-                video!
+                I was tasked with redesigning the logo. Eventually, I led a full
+                brand and content build for Fibarcode, creating the visual
+                identity, messaging, logo, brand guidelines, and a product video
+                — all within a fast-paced 90-hour turnaround. Explore the
+                Animation planet to see the product video!
               </p>
             </div>
           ),

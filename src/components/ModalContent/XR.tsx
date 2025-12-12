@@ -28,7 +28,7 @@ export default function XR() {
                 mechanics. I also created the website in Wix, detailing our
                 process and a fictitious subscription plan for the DNAVR
                 product. If you want to view the tutorial slides, explore the
-                Design planet! And if you want to see the website,
+                Design planet! And if you want to see the website,{" "}
                 <strong>
                   <a
                     href="https://jamizh.wixsite.com/dnavr"
