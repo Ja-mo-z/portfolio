@@ -5,7 +5,9 @@ export interface Image {
   id: number;
   title?: string;
   description?: string | React.ReactElement;
-  imgSrc: string;
+  imgSrc: string | React.ReactElement;
+  height?: number;
+  width?: number;
 }
 
 export interface Video {
@@ -123,12 +125,19 @@ export default function TemplateShowcase({ tabData }: ShowcaseProps) {
               transition={{ duration: 0.35, delay: i * 0.08 }}
             >
               <div className="overflow-hidden rounded-md flex justify-center items-center">
-                <img
-                  src={img.imgSrc}
-                  className="rounded-md w-full object-cover"
-                  alt={img.title}
-                  style={{ height: "250px", width: "auto" }}
-                />
+                {typeof img.imgSrc === "string" ? (
+                  <img
+                    src={img.imgSrc}
+                    className="rounded-md w-full object-cover"
+                    alt={img.title}
+                    style={{
+                      height: img.height ?? "250px",
+                      width: img.width ?? "auto",
+                    }}
+                  />
+                ) : (
+                  img.imgSrc
+                )}
               </div>
 
               <div className="mt-2">
