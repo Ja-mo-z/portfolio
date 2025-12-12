@@ -1,4 +1,4 @@
-import TemplateShowcase, { type Video } from "./MediaShowcase";
+import TemplateShowcase, { type Video } from "./Templates/MediaShowcase";
 
 export default function FilmVideo() {
   const tabData = [
@@ -9,7 +9,7 @@ export default function FilmVideo() {
         "Premiere Pro",
         "After Effects",
         "Panasonic Lumix",
-        "Black Magic Pocket 4k",
+        "Blackmagic Pocket",
         "DJI Mini 3",
       ],
       videos: [

@@ -1,4 +1,4 @@
-import TemplateShowcase from "./MediaShowcase";
+import TemplateShowcase from "./Templates/MediaShowcase";
 
 // Digital Art Assets
 import Symmetryfinal from "../../assets/art/Symmetryfinal.jpg";

@@ -1,4 +1,4 @@
-import PDFTabShowcase from "./PDFTabShowcase";
+import PDFTabShowcase from "./Templates/PDFTabShowcase";
 const tabs = [
   {
     name: "Stories",
