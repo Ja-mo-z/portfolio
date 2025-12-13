@@ -160,7 +160,7 @@ export default function Design() {
 
         {
           id: 4,
-          imgSrc: <HoverZoom src={FRotated} width="300px" height="150px" />,
+          imgSrc: <HoverZoom src={FRotated} />,
           description: (
             <div>
               <p>
@@ -176,7 +176,7 @@ export default function Design() {
         {
           id: 6,
           imgSrc: FBLogo,
-          height: 80,
+          width: 100,
           description: (
             <div>
               <p>
@@ -196,7 +196,7 @@ export default function Design() {
         },
         {
           id: 5,
-          imgSrc: <HoverZoom src={FBOutlines} width="300px" height="150px" />,
+          imgSrc: <HoverZoom src={FBOutlines} width="400px" height="200px" />,
           //   imgSrc: (
           //     <img src={FBOutlines} style={{ height: "auto", width: "auto" }} />
           //   ),

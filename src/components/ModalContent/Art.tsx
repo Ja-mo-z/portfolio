@@ -46,7 +46,7 @@ export default function Art() {
           id: 3,
           imgSrc: UncleSam,
         },
-        { id: 4, imgSrc: google, height: 150 },
+        { id: 4, imgSrc: google, height: 145 },
         {
           id: 5,
           imgSrc: ScreenPrint,
