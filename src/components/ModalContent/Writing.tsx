@@ -32,7 +32,7 @@ const tabs = [
             </p>
           </div>
         ),
-        url: "pdfs/HadFarm.pdf",
+        url: "pdfs/Farm.pdf",
       },
       {
         id: 1,
