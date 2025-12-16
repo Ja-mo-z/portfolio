@@ -67,7 +67,7 @@ export default function Planet({
             rotate: shouldRotate ? 360 : 0,
           }}
           transition={{
-            duration: 50,
+            duration: 200,
             repeat: Infinity,
             ease: "linear",
             delay: rotationDelay,
