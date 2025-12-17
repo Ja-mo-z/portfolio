@@ -23,13 +23,30 @@ export default function ImageCarousel({
   height = 250,
 }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState<1 | -1>(1);
 
   const prev = () => {
+    setDirection(-1);
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   const next = () => {
+    setDirection(1);
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+  const variants = {
+    enter: (direction: 1 | -1) => ({
+      x: direction === 1 ? 50 : -50,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction: 1 | -1) => ({
+      x: direction === 1 ? -50 : 50,
+      opacity: 0,
+    }),
   };
 
   return (
@@ -38,13 +55,15 @@ export default function ImageCarousel({
       style={{ width, height }}
     >
       {/* Images */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" custom={direction}>
         <motion.div
           key={images[currentIndex].id}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.4 }}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="flex items-center justify-center w-full h-full"
         >
           {images[currentIndex].link ? (

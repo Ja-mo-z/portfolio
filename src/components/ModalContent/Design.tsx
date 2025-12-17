@@ -2,6 +2,9 @@ import MediaShowcase from "./Templates/MediaShowcase";
 import Carousel from "./Templates/Carousel";
 import HoverZoom from "./Templates/HoverZoom";
 
+// DNAVR Tutorial Slides
+import { DNAVRSlides } from "../../data/DNAVRSlides";
+
 // Individual images
 import AndyWarhog from "@/assets/design/graphic design/Andy Warhog.png";
 import Finalfeesh2 from "@/assets/design/graphic design/Finalfeesh2.png";
@@ -246,6 +249,7 @@ export default function Design() {
       ),
       images: [
         { id: 4, imgSrc: Finalfeesh2 },
+        DNAVRSlides,
 
         { id: 1, imgSrc: AndyWarhog },
         // { id: 2, imgSrc: CameraBasics, title: "Camera Basics" },
