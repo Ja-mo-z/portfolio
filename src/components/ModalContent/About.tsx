@@ -64,7 +64,7 @@ export default function AboutTab() {
           </a>
 
           <a
-            href="mailto:jamizh@gmail.com"
+            href="mailto:jamizh@umich.edu"
             target="_blank"
             className="hover:scale-110 transform transition-transform duration-200 ease-in-out"
           >
