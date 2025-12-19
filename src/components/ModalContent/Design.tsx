@@ -115,7 +115,7 @@ export default function Design() {
       tools: ["Inkscape", "Figma", "Adobe Color"],
       subheading: (
         <div>
-          <p className="text-indigo-200 font-bold text-sm mb-2">Fibarcode</p>
+          <p className="text-indigo-300 font-bold text-sm mb-2">Fibarcode</p>
           <p>
             Fibarcode is a startup, founded by Brian Iezzi, that's trying to
             make labels and textiles more sustainable using photonic fibers as
@@ -282,7 +282,7 @@ export default function Design() {
           id: 1,
           title: (
             <div
-              className="font-semibold text-indigo-200 hover:text-white hover:scale-101 transition-transform ease-in-out flex gap-2 items-center"
+              className="font-semibold text-indigo-300 hover:text-white hover:scale-101 transition-transform ease-in-out flex gap-2 items-center"
               onClick={() =>
                 window.open(
                   "https://aestheticofillegibility.framer.website/",

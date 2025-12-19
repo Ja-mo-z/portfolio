@@ -115,7 +115,7 @@ export default function AboutTab() {
         {/* <div className="border-t-1 border-white/70 my-2" /> */}
         {/* Section 2 */}
         <div className="mb-6 mt-4">
-          <div className="font-semibold text-indigo-200 mb-2 text-sm">
+          <div className="font-semibold text-indigo-300 mb-2 text-sm">
             What gets me excited
           </div>
           <ul className="list-disc ml-5 space-y-1 text-white/80">
@@ -132,7 +132,7 @@ export default function AboutTab() {
         {/* <div className="border-t-1 border-white/70 my-2" /> */}
         {/* Section 3 */}
         <div className="mb-6 mt-4">
-          <div className="font-semibold text-indigo-200 mb-2 text-sm">
+          <div className="font-semibold text-indigo-300 mb-2 text-sm">
             What I want to try
           </div>
           <ul className="list-disc ml-5 space-y-1 text-white/80">
@@ -146,7 +146,7 @@ export default function AboutTab() {
         {/* <div className="border-t-1 border-white/70 my-2" /> */}
         {/* Section 3 */}
         <div className="mb-2 mt-4">
-          <div className="font-semibold text-indigo-200 mb-2 text-sm">
+          <div className="font-semibold text-indigo-300 mb-2 text-sm">
             Education
           </div>
 

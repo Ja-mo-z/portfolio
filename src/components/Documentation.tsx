@@ -41,23 +41,29 @@ export default function Documentation({ size }: { size: number }) {
             </div>
 
             {/* Modal content */}
-            <div className="p-4 text-white text-xs space-y-3">
-              <p className="font-semibold text-indigo-200">
+            <div className="p-4 text-white text-sm space-y-3">
+              <p className="font-bold text-sky-200 ">
                 What you can do on this site!
               </p>
               <ul className="list-disc ml-5 text-white/80 space-y-1">
                 <li>
-                  Drag the planets (and the lone dancing sparkle) wherever you
-                  want!
+                  <b className="text-indigo-300 ">Drag the planets</b> (and the
+                  lone dancing sparkle) wherever you want!
                 </li>
                 <li>
-                  Click the planets to explore some projects I’ve worked on.
+                  Click the planets to{" "}
+                  <b className="text-indigo-300">
+                    explore some projects I’ve worked on.
+                  </b>
                 </li>
-                <li>Play some relaxing background music.</li>
+                <li>
+                  Play some relaxing background{" "}
+                  <b className="text-indigo-300">music</b>.
+                </li>
                 <li>Know what time it is on my end of the galaxZ.</li>
               </ul>
 
-              <p className="font-semibold text-indigo-200">How I made it</p>
+              <p className="font-semibold text-sky-200 ">How I made it</p>
               <ul className="list-disc ml-5 text-white/80 space-y-1">
                 <li>
                   Built using React and Vite, then deployed on GitHub Pages.
@@ -67,12 +73,12 @@ export default function Documentation({ size }: { size: number }) {
                 </li>
               </ul>
 
-              <p className="font-semibold text-indigo-200">Resources</p>
+              <p className="font-semibold text-sky-200 ">Resources</p>
               <ul className="list-disc ml-5 text-white/80 space-y-1">
                 <li>
                   <a
                     href="https://ui.aceternity.com/components/shooting-stars-and-stars-background"
-                    className="underline hover:text-blue-400 "
+                    className="underline hover:text-indigo-400 "
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -82,7 +88,7 @@ export default function Documentation({ size }: { size: number }) {
                 <li>
                   <a
                     href="https://socket.dev/npm/package/rocket-cursor-component "
-                    className="underline hover:text-blue-400 "
+                    className="underline hover:text-indigo-400 "
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -92,7 +98,7 @@ export default function Documentation({ size }: { size: number }) {
                 <li>
                   <a
                     href="https://www.epidemicsound.com/music/tracks/7dcbeeae-9cc6-42c6-bf09-a523c2e2cd2e/"
-                    className="underline hover:text-blue-400"
+                    className="underline hover:text-indigo-400"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -102,7 +108,7 @@ export default function Documentation({ size }: { size: number }) {
                 <li>
                   <a
                     href="https://www.svgrepo.com/"
-                    className="underline hover:text-blue-400"
+                    className="underline hover:text-indigo-400"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -112,7 +118,7 @@ export default function Documentation({ size }: { size: number }) {
                 <li>
                   <a
                     href="https://www.npmjs.com/package/framer-motion"
-                    className="underline hover:text-blue-400"
+                    className="underline hover:text-indigo-400"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -121,9 +127,7 @@ export default function Documentation({ size }: { size: number }) {
                 </li>
               </ul>
 
-              <p className="font-semibold text-indigo-200">
-                Future developments
-              </p>
+              <p className="font-semibold text-sky-200 ">Future developments</p>
               <ul className="list-disc ml-5 text-white/80 space-y-1">
                 <li>
                   Improve the planet modals (appearance, resizability, and

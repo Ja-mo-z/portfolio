@@ -110,7 +110,7 @@ export default function TemplateShowcase({ tabData }: ShowcaseProps) {
             {tools.map((t) => (
               <div
                 key={t}
-                className="text-white/80 text-xs font-semibold bg-black/30 rounded-md p-1"
+                className="text-white/60 text-xs font-semibold bg-black/20 rounded-md p-1"
               >
                 {t}
               </div>
@@ -145,7 +145,7 @@ export default function TemplateShowcase({ tabData }: ShowcaseProps) {
               </div>
 
               <div className="mt-2">
-                <div className="font-semibold text-indigo-200">{img.title}</div>
+                <div className="font-semibold text-indigo-300">{img.title}</div>
                 <div className="text-white/70 text-xs mt-1">
                   {img.description}
                 </div>
@@ -187,7 +187,7 @@ export default function TemplateShowcase({ tabData }: ShowcaseProps) {
               </div>
 
               <div className="mt-2">
-                <div className="font-semibold text-indigo-200">{v.title}</div>
+                <div className="font-semibold text-indigo-300">{v.title}</div>
                 <div className="text-white/70 text-xs mt-1">
                   {v.description}
                 </div>

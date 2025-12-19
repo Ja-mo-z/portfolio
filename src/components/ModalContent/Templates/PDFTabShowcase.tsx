@@ -74,7 +74,7 @@ export default function PDFTabShowcase({ tabData }: PDFTabShowcaseProps) {
               className="cursor-pointer bg-black/30 p-2 rounded-md hover:bg-black/50"
             >
               <div
-                className="font-semibold text-indigo-200 hover:text-white hover:scale-101 transition-transform ease-in-out flex gap-2 items-center"
+                className="font-semibold text-indigo-300 hover:text-white hover:scale-101 transition-transform ease-in-out flex gap-2 items-center"
                 onClick={() =>
                   window.open(`${import.meta.env.BASE_URL}${doc.url}`, "_blank")
                 }
