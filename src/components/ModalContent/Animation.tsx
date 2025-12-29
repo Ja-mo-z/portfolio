@@ -27,15 +27,10 @@ export default function Animation() {
                 as permanent barcodes. During this project, I looked at a lot of
                 Apple and Google commercials, and had to deal with my computer
                 buffering and wheezing as it tried to keep up with the motion
-                graphics.{" "}
-              </p>
-              <p>
-                Brian gave me a lot of creative freedom – which I’m super
-                grateful for – and I built everything from scratch using
-                Illustrator, After Effects, and Premiere Pro.
-              </p>
-              <p>
-                Explore the Design Planet to see more of my work with Fibarcode!
+                graphics. Brian gave me a lot of creative freedom – which I’m
+                super grateful for – and I built everything from scratch using
+                Illustrator, After Effects, and Premiere Pro. Explore the Design
+                Planet to see more of my work with Fibarcode!
               </p>
             </div>
           ),

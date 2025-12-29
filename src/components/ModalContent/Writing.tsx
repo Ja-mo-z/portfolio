@@ -45,10 +45,7 @@ const tabs = [
               common trope of trying to prevent the end of the world into trying
               to prevent the start of one. The God in “The Start of a World”
               wants to break out of the cycle of rebirth and redeath, while the
-              planet desperately wants to live again.
-            </p>
-            <p>
-              This was based on{" "}
+              planet desperately wants to live again. This was based on{" "}
               <strong>
                 <a
                   href="https://www.youtube.com/watch?v=h6fcK_fRYaI"
