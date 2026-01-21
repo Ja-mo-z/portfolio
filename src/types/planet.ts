@@ -16,6 +16,7 @@ export type PlanetType = {
   onFocus?: () => void;
   onMove?: (pos: PlanetPosition) => void;
   onClick?: () => void;
+  variant?: "standard" | "featured";
 };
 
 export type PlanetState = Record<

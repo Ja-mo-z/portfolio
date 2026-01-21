@@ -9,6 +9,7 @@ import Documentation from "./Documentation";
 export default function Desktop() {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
+  // keep positions as fractions 0-1
   const [positions, setPositions] = useState(() =>
     initialPlanets.map((p) => ({
       id: p.id,
@@ -26,29 +27,27 @@ export default function Desktop() {
       const container = containerRef.current;
       if (!container) return;
 
-      // get container bounds
       const rect = container.getBoundingClientRect();
+      const planetSize = 64;
 
-      // clamp position inside container (middle 90% already)
-      const planetSize = 64; // size of planet image
-      const clampedX = Math.min(Math.max(pos.x, 0), rect.width - planetSize);
-      const clampedY = Math.min(Math.max(pos.y, 0), rect.height - planetSize);
+      // Convert pixel position back to fraction
+      const fractionX = Math.min(Math.max(pos.x / rect.width, 0), 1);
+      const fractionY = Math.min(Math.max(pos.y / rect.height, 0), 1);
 
       setPositions((prev) =>
-        prev.map((p) => (p.id === id ? { ...p, x: clampedX, y: clampedY } : p))
+        prev.map((p) =>
+          p.id === id ? { ...p, x: fractionX, y: fractionY } : p
+        )
       );
       setTopId(id);
     },
     []
   );
 
-  // console.log(initialPlanets);
-
   return (
     <>
       <Documentation size={32} />
       <Ambient />
-
       <Greetings />
 
       <motion.div
@@ -68,11 +67,12 @@ export default function Desktop() {
               title={p.title}
               shouldRotate={p.shouldRotate}
               content={p.content}
-              position={{ x: pos.x, y: pos.y }}
+              position={{ x: pos.x, y: pos.y }} // fractions 0-1
               onMove={(pos) => handleMove(p.id, pos)}
               onFocus={() => handleFocus(p.id)}
               zIndex={zIndex}
               dragConstraints={containerRef}
+              variant={p.variant}
             />
           );
         })}

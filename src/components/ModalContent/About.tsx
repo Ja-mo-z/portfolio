@@ -28,7 +28,10 @@ export default function AboutTab() {
           </div>
         </div>
         <p className="text-white/80 mb-4">
-          Aspiring writer, filmmaker, illustrator, and developer
+          A visual storyteller and creative technologist interested in how
+          narrative, design, and emerging media intersect. I’ve worked across
+          film, animation, XR, and design, often focusing on projects that
+          explore process, emotion, and collaboration.
         </p>
         {/* Contact */}
         <div className="flex gap-2 mb-6 text-white/70 text-xs text-center items-center ">

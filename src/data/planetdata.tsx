@@ -10,6 +10,7 @@ import AnimationPlanet from "../assets/planets/Animation_Planet.png";
 import FilmVideoPlanet from "../assets/planets/FilmVideo_Planet.png";
 import XRPlanet from "../assets/planets/XR_Planet.png";
 import Sparkle from "../assets/Sparkle.png";
+import Sun from "../assets/planets/Sun.png";
 
 // Import all tab contents (for Vite to bundle them correctly)
 import AboutTab from "../components/ModalContent/About";
@@ -21,29 +22,39 @@ import SocialMedia from "../components/ModalContent/SocialMedia";
 // import BrandDesign from "../components/ModalContent/BrandDesign";
 import Writing from "../components/ModalContent/Writing";
 import Art from "../components/ModalContent/Art";
+import FeaturedProjects from "../components/ModalContent/FeaturedProjects";
 
 export const planets: PlanetType[] = [
   {
     id: "about",
     title: "About Me!",
     icon: Sparkle,
-    size: 0.1,
+    size: 0.09,
     position: { x: 0.05, y: 0.05 },
     shouldRotate: false,
     content: <AboutTab />,
   },
   {
+    id: "featured",
+    title: "Featured Projects",
+    icon: Sun,
+    size: 0.5,
+    position: { x: 0.5, y: 0.5 },
+    variant: "featured",
+    content: <FeaturedProjects />,
+  },
+  {
     id: "writing",
     title: "Writing",
     icon: WritingPlanet,
-    size: 0.15,
+    size: 0.14,
     position: { x: 0.03, y: 0.45 },
     content: <Writing />,
   },
   {
     id: "design",
     title: "Design",
-    size: 0.15,
+    size: 0.14,
     icon: BrandDesignPlanet,
     position: { x: 0.35, y: 0.35 },
     content: <Design />,
@@ -51,7 +62,7 @@ export const planets: PlanetType[] = [
   {
     id: "film_video",
     title: "Film/Video",
-    size: 0.15,
+    size: 0.14,
     icon: FilmVideoPlanet,
     position: { x: 0.7, y: 0.2 },
     content: <FilmVideo />,
@@ -59,7 +70,7 @@ export const planets: PlanetType[] = [
   {
     id: "art",
     title: "Art",
-    size: 0.085,
+    size: 0.075,
     icon: GraphicDesignPlanet,
     position: { x: 0.55, y: 0.55 },
     content: <Art />,

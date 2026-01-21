@@ -15,24 +15,46 @@ export default function Planet({
   onFocus,
   zIndex,
   dragConstraints,
+  variant = "standard",
 }: PlanetType) {
   const [isDragging, setIsDragging] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const isFeatured = variant === "featured";
 
   const planetSize = size ?? 32;
   const { width: screenW, height: screenH } = useWindowDimensions();
 
   const rotationDelay = useRef(Math.random() * 10).current;
 
+  const modalStyle = isFeatured
+    ? {
+        position: "fixed" as const,
+        // top: "50%",
+        // left: "50%",
+        transform: "translate(-50%, -50%)",
+        width: Math.min(screenW * 0.8, 900),
+        height: Math.min(screenH * 0.8, 700),
+        zIndex: 3000,
+      }
+    : {
+        position: "absolute" as const,
+        top: "calc(100% + 8px)",
+        left: "50%",
+        transform: "translateX(-50%)",
+        width: Math.min(screenW * 0.5, 400),
+        height: Math.min(screenH * 0.6, 400),
+        zIndex: (zIndex ?? 1000) + 1,
+      };
   return (
     <motion.div
       className="absolute flex flex-col items-center"
       style={{
         x: position.x * screenW,
         y: position.y * screenH,
-        zIndex: zIndex ?? (isDragging ? 9999 : 1000),
+        zIndex: zIndex ?? 1000,
       }}
-      drag
+      drag={!isFeatured}
       dragConstraints={dragConstraints}
       dragMomentum={false}
       dragElastic={0}
@@ -89,20 +111,17 @@ export default function Planet({
         {isOpen && (
           <motion.div
             key={`modal-${id}`}
+            style={modalStyle}
+            className={`overflow-auto rounded-xl shadow-xl
+    ${
+      isFeatured
+        ? "bg-black/60 backdrop-blur-xl"
+        : "bg-white/20 backdrop-blur-xl"
+    }`}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ type: "tween", stiffness: 120, damping: 20 }}
-            style={{
-              position: "absolute",
-              top: "calc(100% + 8px)",
-              left: "50%",
-              transform: "translateX(-50%)",
-              zIndex: (zIndex ?? 1000) + 1,
-              width: Math.min(screenW * 0.5, 400),
-              height: Math.min(screenH * 0.6, 400),
-            }}
-            className="overflow-auto bg-white/20 backdrop-blur-xl rounded-xl shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Top title bar */}
