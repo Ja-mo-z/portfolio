@@ -49,6 +49,31 @@ export const planets: PlanetType[] = [
     variant: "featured",
     content: <FeaturedProjects />,
   },
+  {
+    id: "film_video",
+    title: "Film / Video",
+    icon: FilmVideoPlanet,
+    size: 0.12,
+    position: { x: 0.2, y: 0.72 },
+    content: <FilmVideo />,
+  },
+  {
+    id: "art",
+    title: "Art",
+    icon: GraphicDesignPlanet,
+    size: 0.07,
+    position: { x: 0.04, y: 0.62 },
+    content: <Art />,
+  },
+
+  {
+    id: "social",
+    title: "Social Media & Marketing",
+    icon: SocialMediaPlanet,
+    size: 0.07,
+    position: { x: 0.15, y: 0.4 },
+    content: <SocialMedia />,
+  },
 
   {
     id: "writing",
@@ -66,31 +91,7 @@ export const planets: PlanetType[] = [
     position: { x: 0.7, y: 0.78 },
     content: <Design />,
   },
-  {
-    id: "film_video",
-    title: "Film / Video",
-    icon: FilmVideoPlanet,
-    size: 0.12,
-    position: { x: 0.25, y: 0.72 },
-    content: <FilmVideo />,
-  },
-  {
-    id: "art",
-    title: "Art",
-    icon: GraphicDesignPlanet,
-    size: 0.07,
-    position: { x: 0.05, y: 0.62 },
-    content: <Art />,
-  },
 
-  {
-    id: "social",
-    title: "Social Media & Marketing",
-    icon: SocialMediaPlanet,
-    size: 0.07,
-    position: { x: 0.2, y: 0.4 },
-    content: <SocialMedia />,
-  },
   {
     id: "xr",
     title: "XR",

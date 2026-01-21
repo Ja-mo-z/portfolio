@@ -29,8 +29,8 @@ export default function Planet({
         position: "fixed" as const,
 
         transform: "translate(-50%, -50%)",
-        // width: "min(80vw, 900px)",
-        // height: "min(80vh, 700px)",
+        width: "min(80vw, 900px)",
+        height: "min(80vh, 700px)",
         zIndex: 3000,
       }
     : {
@@ -38,8 +38,8 @@ export default function Planet({
         top: "calc(100% + 8px)",
         left: "50%",
         transform: "translateX(-50%)",
-        // width: "min(50vw, 400px)",
-        // height: "min(60vh, 400px)",
+        width: "min(50vw, 400px)",
+        height: "min(60vh, 400px)",
         zIndex: (zIndex ?? 1000) + 1,
       };
 
