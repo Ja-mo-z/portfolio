@@ -1,7 +1,6 @@
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import type { PlanetType } from "../types/planet";
-import useWindowDimensions from "../data/windowSize";
 
 export default function Planet({
   id,
@@ -21,20 +20,17 @@ export default function Planet({
   const [isOpen, setIsOpen] = useState(false);
 
   const isFeatured = variant === "featured";
-
-  const planetSize = size ?? 32;
-  const { width: screenW, height: screenH } = useWindowDimensions();
-
   const rotationDelay = useRef(Math.random() * 10).current;
+
+  const planetSize = size ?? 0.1; // interpreted as vw fraction
 
   const modalStyle = isFeatured
     ? {
         position: "fixed" as const,
-        // top: "50%",
-        // left: "50%",
+
         transform: "translate(-50%, -50%)",
-        width: Math.min(screenW * 0.8, 900),
-        height: Math.min(screenH * 0.8, 700),
+        // width: "min(80vw, 900px)",
+        // height: "min(80vh, 700px)",
         zIndex: 3000,
       }
     : {
@@ -42,51 +38,55 @@ export default function Planet({
         top: "calc(100% + 8px)",
         left: "50%",
         transform: "translateX(-50%)",
-        width: Math.min(screenW * 0.5, 400),
-        height: Math.min(screenH * 0.6, 400),
+        // width: "min(50vw, 400px)",
+        // height: "min(60vh, 400px)",
         zIndex: (zIndex ?? 1000) + 1,
       };
+
   return (
     <motion.div
       className="absolute flex flex-col items-center"
       style={{
-        x: position.x * screenW,
-        y: position.y * screenH,
-        zIndex: zIndex ?? 1000,
+        x: position.x,
+        y: position.y,
+        translateX: "-50%",
+        translateY: "-50%",
+        zIndex,
       }}
       drag={!isFeatured}
       dragConstraints={dragConstraints}
       dragMomentum={false}
       dragElastic={0}
-      onPointerDown={() => onFocus && onFocus()}
+      onPointerDown={() => onFocus?.()}
       onDragStart={() => {
         setIsDragging(true);
-        onFocus && onFocus();
+        onFocus?.();
       }}
       onDragEnd={(_, info) => {
         setIsDragging(false);
-        onMove &&
-          onMove({
-            x: info.point.x,
-            y: info.point.y,
-          });
+        onMove?.({
+          x: info.point.x,
+          y: info.point.y,
+        });
       }}
       whileHover={{ scale: 1.05 }}
-      // whileTap={{ scale: 0.98 }}
       whileDrag={{ scale: 1.05, rotate: -5 }}
-      onClick={isDragging ? undefined : () => setIsOpen(true)}
       transition={{ type: "tween", stiffness: 300, damping: 30 }}
+      onClick={isDragging ? undefined : () => setIsOpen(true)}
     >
-      {/* Planet icon and title */}
+      {/* Planet icon */}
       <motion.div className="flex flex-col items-center cursor-pointer select-none">
         <motion.img
           src={icon}
-          style={{ width: planetSize * screenW, height: planetSize * screenW }}
-          className={`object-contain select-none`}
           draggable={false}
+          className="object-contain select-none"
+          style={{
+            width: `clamp(48px, ${planetSize * 100}vw, 400px)`,
+            height: `clamp(48px, ${planetSize * 100}vw, 400px)`,
+          }}
           animate={{
-            filter: "drop-shadow(0 0 16px rgba(255, 255, 255, 0.4))",
             rotate: shouldRotate ? 360 : 0,
+            filter: "drop-shadow(0 0 16px rgba(255,255,255,0.4))",
           }}
           transition={{
             duration: 200,
@@ -95,10 +95,11 @@ export default function Planet({
             delay: rotationDelay,
           }}
           onClick={(e) => {
-            e.stopPropagation(); // Prevent the parent onClick from firing
-            if (!isDragging) setIsOpen(!isOpen);
+            e.stopPropagation();
+            if (!isDragging) setIsOpen((v) => !v);
           }}
         />
+
         {!isOpen && (
           <div className="text-sm mt-1 max-w-32 text-center select-none">
             {title}
@@ -106,32 +107,27 @@ export default function Planet({
         )}
       </motion.div>
 
-      {/* Modal below planet */}
+      {/* Modal */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             key={`modal-${id}`}
             style={modalStyle}
-            className={`overflow-auto rounded-xl shadow-xl
-    ${
-      isFeatured
-        ? "bg-black/60 backdrop-blur-xl"
-        : "bg-white/20 backdrop-blur-xl"
-    }`}
+            className={`overflow-auto rounded-xl shadow-xl ${
+              isFeatured
+                ? "bg-black/60 backdrop-blur-xl"
+                : "bg-white/20 backdrop-blur-xl"
+            }`}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ type: "tween", stiffness: 120, damping: 20 }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Top title bar */}
-            <div
-              className="sticky top-0 z-20 flex justify-between items-center 
-                      bg-white/10 backdrop-blur-md rounded-t-xl px-4 py-2"
-            >
+            <div className="sticky top-0 z-20 flex justify-between items-center bg-white/10 backdrop-blur-md rounded-t-xl px-4 py-2">
               <h3 className="font-semibold text-sm">{title}</h3>
               <button
-                className="text-white text-md bg-transparent p-0 border-none cursor-pointer hover:scale-125 transform transition-transform duration-200 ease-in-out"
+                className="text-white text-md hover:scale-125 transition-transform"
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsOpen(false);
@@ -141,7 +137,6 @@ export default function Planet({
               </button>
             </div>
 
-            {/* Modal content */}
             <div className="p-4">{content}</div>
           </motion.div>
         )}

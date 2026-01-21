@@ -1,6 +1,15 @@
 export default function FeaturedProjects() {
   const projects = [
     {
+      title: "Fibarcode Product Video",
+      type: "Branded / Motion Design",
+      description:
+        "Fibarcode is a startup founded by Brian Iezzi that’s trying to make labels and textiles more sustainable using photonic fibers as permanent barcodes. During this project, I looked at a lot of Apple and Google commercials, and had to deal with my computer buffering and wheezing as it tried to keep up with the motion graphics. Brian gave me a lot of creative freedom – which I’m super grateful for – and I built everything from scratch using Illustrator, After Effects, and Premiere Pro. Explore the Design Planet to see more of my work with Fibarcode!",
+      role: "Designer / Motion Graphics",
+      embedUrl: "https://www.youtube.com/embed/Cbr8IiMHhyE",
+    },
+
+    {
       title: "STAMPS",
       type: "Short documentary",
       description:

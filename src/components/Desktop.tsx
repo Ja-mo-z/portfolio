@@ -1,16 +1,27 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useLayoutEffect } from "react";
+import { motion } from "framer-motion";
 import Planet from "./Planet";
 import Greetings from "./Greetings";
-import { planets as initialPlanets } from "../data/planetdata";
-import { motion } from "framer-motion";
 import Ambient from "./Ambient";
 import Documentation from "./Documentation";
+import { planets as initialPlanets } from "../data/planetdata";
+
+type PositionFraction = {
+  id: string;
+  x: number;
+  y: number;
+};
 
 export default function Desktop() {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // keep positions as fractions 0-1
-  const [positions, setPositions] = useState(() =>
+  const [containerSize, setContainerSize] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  // store positions as fractions (0–1)
+  const [positions, setPositions] = useState<PositionFraction[]>(() =>
     initialPlanets.map((p) => ({
       id: p.id,
       x: p.position.x,
@@ -20,25 +31,65 @@ export default function Desktop() {
 
   const [topId, setTopId] = useState<string | null>(null);
 
-  const handleFocus = useCallback((id: string) => setTopId(id), []);
+  // measure container
+  useLayoutEffect(() => {
+    const updateSize = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      setContainerSize({ width: rect.width, height: rect.height });
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
+  const handleFocus = useCallback((id: string) => {
+    setTopId(id);
+  }, []);
 
   const handleMove = useCallback(
-    (id: string, pos: { x: number; y: number }) => {
+    (
+      id: string,
+      pixelPos: {
+        x: number;
+        y: number;
+      }
+    ) => {
       const container = containerRef.current;
       if (!container) return;
 
       const rect = container.getBoundingClientRect();
-      const planetSize = 64;
 
-      // Convert pixel position back to fraction
-      const fractionX = Math.min(Math.max(pos.x / rect.width, 0), 1);
-      const fractionY = Math.min(Math.max(pos.y / rect.height, 0), 1);
+      const HORIZONTAL_RADIUS = 160;
+      const TOP_RADIUS = 140;
+      const BOTTOM_PADDING = 240;
+
+      const rawX = pixelPos.x - rect.left;
+      const rawY = pixelPos.y - rect.top;
+
+      const clampedX = Math.min(
+        Math.max(rawX, HORIZONTAL_RADIUS),
+        rect.width - HORIZONTAL_RADIUS
+      );
+
+      const clampedY = Math.min(
+        Math.max(rawY, TOP_RADIUS),
+        rect.height - BOTTOM_PADDING
+      );
 
       setPositions((prev) =>
         prev.map((p) =>
-          p.id === id ? { ...p, x: fractionX, y: fractionY } : p
+          p.id === id
+            ? {
+                ...p,
+                x: clampedX / rect.width,
+                y: clampedY / rect.height,
+              }
+            : p
         )
       );
+
       setTopId(id);
     },
     []
@@ -52,7 +103,7 @@ export default function Desktop() {
 
       <motion.div
         ref={containerRef}
-        className="desktop relative w-[90vw] h-[90vh] mx-auto my-auto"
+        className="desktop relative w-[90vw] h-[90vh] mx-auto my-auto overflow-visible"
       >
         {initialPlanets.map((p, i) => {
           const pos = positions.find((x) => x.id === p.id)!;
@@ -62,17 +113,20 @@ export default function Desktop() {
             <Planet
               key={p.id}
               id={p.id}
+              title={p.title}
               icon={p.icon}
               size={p.size}
-              title={p.title}
               shouldRotate={p.shouldRotate}
               content={p.content}
-              position={{ x: pos.x, y: pos.y }} // fractions 0-1
-              onMove={(pos) => handleMove(p.id, pos)}
-              onFocus={() => handleFocus(p.id)}
+              variant={p.variant}
               zIndex={zIndex}
               dragConstraints={containerRef}
-              variant={p.variant}
+              position={{
+                x: pos.x * containerSize.width,
+                y: pos.y * containerSize.height,
+              }}
+              onMove={(pixelPos) => handleMove(p.id, pixelPos)}
+              onFocus={() => handleFocus(p.id)}
             />
           );
         })}
