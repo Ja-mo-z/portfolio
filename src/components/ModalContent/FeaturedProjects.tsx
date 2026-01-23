@@ -26,6 +26,14 @@ export default function FeaturedProjects() {
       embedUrl: "https://videopress.com/embed/qqwW4dOr",
     },
     {
+      title: "Just Keep Swimming",
+      type: "Animation",
+      description:
+        "A girl goes for a seemingly ordinary swim but is pulled down by unseen forces. This animation explores the overwhelming, addictive feeling of hopelessness—the girl gets in the pool and follows the jellyfish deeper despite knowing she shouldn’t. The jellyfish symbolizes a dangerous comfort, luring her (and others) into the darkness.",
+      role: "Animator",
+      embedUrl: "https://www.youtube.com/embed/mxWIG3HSp0Q",
+    },
+    {
       title: "WOLV-TV Spotlight: Soda Kazuhiro",
       type: "Interview / documentary",
       description:
