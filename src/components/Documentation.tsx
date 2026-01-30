@@ -22,7 +22,7 @@ export default function Documentation({ size }: { size: number }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="fixed z-[10000] bottom-20 right-20 w-80 max-h-[60vh] overflow-auto
+            className="fixed z-[10000] bottom-20 right-20 w-80 max-h-[35vh] overflow-auto
              bg-white/20 backdrop-blur-xl rounded-xl shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
