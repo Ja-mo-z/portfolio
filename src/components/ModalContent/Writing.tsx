@@ -19,6 +19,19 @@ const tabs = [
         url: "pdfs/Why We Eat.pdf",
       },
       {
+        id: 8,
+        title: "A Standup Comedy",
+        description: (
+          <div>
+            <p>
+              A short skit about being a good person, Imagine Dragons, children,
+              and a closet. Not really in that order.
+            </p>
+          </div>
+        ),
+        url: "pdfs/A Standup Comedy.pdf",
+      },
+      {
         id: 0,
         title: "Had A Farm",
         description: (
@@ -33,6 +46,19 @@ const tabs = [
           </div>
         ),
         url: "pdfs/Farm.pdf",
+      },
+      {
+        id: 5,
+        title: "i can't draw circles",
+        description: (
+          <div>
+            <p>
+              A tale about perfectionism, and how the pursuit of it often leads
+              to failure.
+            </p>
+          </div>
+        ),
+        url: "pdfs/i can't draw circles.pdf",
       },
       {
         id: 1,
@@ -72,11 +98,12 @@ const tabs = [
           <div className="h-24 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
             <p>
               I wrote this book when I was 16. The only idea I remember clearly
-              is that I wanted it to begin with a funeral and end with a
-              wedding. It’s been more than five years, though, so I’ve forgotten
-              the actual plot. I briefly skimmed through it before putting it
-              here, and I can confidently tell you that as a 16 year old, I was
-              really really ...
+              is that I wanted it to begin with a funeral and end with a wedding
+              -- both of which I had never gone to at that age. It’s been more
+              than five years, though, so I’ve forgotten the actual plot. I
+              briefly skimmed through it before putting it here, and I can
+              confidently tell you that as a 16 year old, I was really really
+              ...
             </p>
             <p>... not Mary Shelley.</p>
             <p>
