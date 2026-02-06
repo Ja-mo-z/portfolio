@@ -24,8 +24,9 @@ const tabs = [
         description: (
           <div>
             <p>
-              A short skit about being a good person, Imagine Dragons, children,
-              and a closet. Not really in that order.
+              A series of standup comedy routines that I wrote for fun. About
+              rocks, jellyfish, the hypocrisy and hopelessness that life is
+              sometimes, dragons, poison ivy, and other random things.
             </p>
           </div>
         ),
