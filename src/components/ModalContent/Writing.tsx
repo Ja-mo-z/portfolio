@@ -30,7 +30,7 @@ const tabs = [
             </p>
           </div>
         ),
-        url: "pdfs/A Standup Comedy.pdf",
+        url: "pdfs/Standup Comedy.pdf",
       },
       {
         id: 0,
