@@ -1,6 +1,14 @@
 export default function FeaturedProjects() {
   const projects = [
     {
+      title: "The Bread - WIP",
+      type: "Short film",
+      description:
+        "I worked as the script supervisor and editor, and I am currently finalizing color grading and audio.",
+      role: "Script Supervisor, editor",
+      embedUrl: "https://www.youtube.com/embed/sIs08Ny8mR8?si=PEuPsn0mp6lOpqdL",
+    },
+    {
       title: "Fibarcode Product Video",
       type: "Branded / Motion Design",
       description:

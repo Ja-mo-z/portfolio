@@ -14,6 +14,16 @@ export default function FilmVideo() {
       ],
       videos: [
         {
+          id: 100,
+          title: "The Bread - WIP",
+          type: "Short film",
+          description:
+            "I worked as the script supervisor and editor, and I am currently finalizing color grading and audio.",
+
+          embedUrl:
+            "https://www.youtube.com/embed/sIs08Ny8mR8?si=PEuPsn0mp6lOpqdL",
+        },
+        {
           id: 0,
           title: "Saved",
           description: (
