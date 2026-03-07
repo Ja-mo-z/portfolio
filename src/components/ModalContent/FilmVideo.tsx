@@ -15,13 +15,13 @@ export default function FilmVideo() {
       videos: [
         {
           id: 100,
-          title: "The Bread - WIP",
+          title: "The Bread",
           type: "Short film",
           description:
-            "I worked as the script supervisor and editor, and I am currently finalizing color grading and audio.",
+            "I worked as the script supervisor and editor. This was one of my first attempts at color grading, which I found so interesting and fun. I learned a lot from editing this, and I hope to continue improving in future projects.",
 
           embedUrl:
-            "https://www.youtube.com/embed/sIs08Ny8mR8?si=PEuPsn0mp6lOpqdL",
+            "https://www.youtube.com/embed/EE5mke7oYQY?si=cyqQDT4AQ6WmTwk-",
         },
         {
           id: 0,
