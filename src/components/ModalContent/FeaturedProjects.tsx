@@ -1,19 +1,19 @@
 export default function FeaturedProjects() {
   const projects = [
     {
-      title: "The Bread - WIP",
+      title: "The Bread",
       type: "Short film",
       description:
-        "I worked as the script supervisor and editor, and I am currently finalizing color grading and audio.",
-      role: "Script Supervisor, editor",
-      embedUrl: "https://www.youtube.com/embed/sIs08Ny8mR8?si=PEuPsn0mp6lOpqdL",
+        "I worked as the script supervisor and editor. This was one of my first attempts at color grading in DaVinci Resolve, and I had a lot of fun experimenting with it. I tried to incorporate mood into the piece by making the first half feel colder and darker, then gradually shifting the second half to a lighter, warmer look. Through this project I also learned quite a bit about audio editing, and I’m seriously considering purchasing DaVinci Resolve mainly for its voice isolation feature. In future projects, I’d like to streamline my workflow by using fewer color nodes, and I’d love to work on moodier pieces where I can really play around with color.",
+      role: "Script Supervisor, Editor",
+      embedUrl: "https://www.youtube.com/embed/EE5mke7oYQY?si=cyqQDT4AQ6WmTwk-",
     },
     {
       title: "Fibarcode Product Video",
       type: "Branded / Motion Design",
       description:
         "Fibarcode is a startup founded by Brian Iezzi that’s trying to make labels and textiles more sustainable using photonic fibers as permanent barcodes. During this project, I looked at a lot of Apple and Google commercials, and had to deal with my computer buffering and wheezing as it tried to keep up with the motion graphics. Brian gave me a lot of creative freedom – which I’m super grateful for – and I built everything from scratch using Illustrator, After Effects, and Premiere Pro. Explore the Design Planet to see more of my work with Fibarcode!",
-      role: "Designer / Motion Graphics",
+      role: "Designer / Motion Graphics Animator",
       embedUrl: "https://www.youtube.com/embed/Cbr8IiMHhyE",
     },
 
@@ -22,7 +22,7 @@ export default function FeaturedProjects() {
       type: "Short documentary",
       description:
         "A short documentary profiling an STAMPS student’s creative process at the University of Michigan. I filmed and edited the piece with the goal of capturing not just the final work, but the thinking, resourcefulness, and personality behind it. The project grew out of genuine curiosity and collaboration, and I focused on observational storytelling, pacing, and visual intimacy to do justice to the artist’s process.",
-      role: "Filmmaker (shooting + editing)",
+      role: "Videographer, Editor",
       embedUrl: "https://www.youtube.com/embed/F8RrV07Aj9c?si=EIBuKB7CxR9C39wG",
     },
     {
@@ -46,7 +46,7 @@ export default function FeaturedProjects() {
       type: "Interview / documentary",
       description:
         "An interview episode for WOLV-TV featuring Peabody Award–winning documentary filmmaker Soda Kazuhiro. I worked as a camera operator and editor, helping shape a clear, respectful conversation around Soda’s observational filmmaking philosophy. The project strengthened my interest in documentary work and my appreciation for thoughtful, well-paced interviews.",
-      role: "Camera operator, editor",
+      role: "Camera Operator, Editor",
       embedUrl: "https://www.youtube.com/embed/ch3ip54nSbw",
     },
     {
@@ -55,7 +55,7 @@ export default function FeaturedProjects() {
       description:
         "Created as part of the Detroit 48-Hour Film Festival, where teams write, shoot, and edit a short film in just two days. I worked as a production assistant, supporting the crew across setup, scheduling, and general on-set needs. The experience was a fast-paced introduction to real production constraints, teamwork, and adaptability under tight deadlines.",
 
-      role: "Production assistant",
+      role: "Production Assistant",
       embedUrl: "https://www.youtube.com/embed/FSs-OHM0Qlo",
     },
     {
@@ -63,7 +63,7 @@ export default function FeaturedProjects() {
       type: "Branded / informational video",
       description:
         "An introduction video for CLAWS, an interdisciplinary student team building augmented reality interfaces for astronauts. I handled pre-production planning, filming coordination, and editing under a tight turnaround tied to a NASA SUITS submission deadline. The project required balancing many voices while maintaining clarity and cohesion in the final piece.",
-      role: "Video producer, editor",
+      role: "Producer, Editor",
       embedUrl: "https://www.youtube.com/embed/WzRxykvbU1w",
     },
   ];

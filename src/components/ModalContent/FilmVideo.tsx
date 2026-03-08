@@ -14,12 +14,23 @@ export default function FilmVideo() {
       ],
       videos: [
         {
-          id: 100,
+          id: 6,
           title: "The Bread",
-          type: "Short film",
-          description:
-            "I worked as the script supervisor and editor. This was one of my first attempts at color grading, which I found so interesting and fun. I learned a lot from editing this, and I hope to continue improving in future projects.",
-
+          description: (
+            <div className="h-24 overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
+              I worked as the script supervisor and editor. This was one of my
+              first attempts at color grading in DaVinci Resolve, and I had a
+              lot of fun experimenting with it. I tried to incorporate mood into
+              the piece by making the first half feel colder and darker, then
+              gradually shifting the second half to a lighter, warmer look.
+              Through this project I also learned quite a bit about audio
+              editing, and I’m seriously considering purchasing DaVinci Resolve
+              mainly for its voice isolation feature. In future projects, I’d
+              like to streamline my workflow by using fewer color nodes, and I’d
+              love to work on moodier pieces where I can really play around with
+              color.
+            </div>
+          ),
           embedUrl:
             "https://www.youtube.com/embed/EE5mke7oYQY?si=cyqQDT4AQ6WmTwk-",
         },
