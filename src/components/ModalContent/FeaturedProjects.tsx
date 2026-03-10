@@ -6,7 +6,7 @@ export default function FeaturedProjects() {
       description:
         "I worked as the script supervisor and editor. This was one of my first attempts at color grading in DaVinci Resolve, and I had a lot of fun experimenting with it. I tried to incorporate mood into the piece by making the first half feel colder and darker, then gradually shifting the second half to a lighter, warmer look. Through this project I also learned quite a bit about audio editing, and I’m seriously considering purchasing DaVinci Resolve mainly for its voice isolation feature. In future projects, I’d like to streamline my workflow by using fewer color nodes, and I’d love to work on moodier pieces where I can really play around with color.",
       role: "Script Supervisor, Editor",
-      embedUrl: "https://www.youtube.com/embed/EE5mke7oYQY?si=cyqQDT4AQ6WmTwk-",
+      embedUrl: "https://www.youtube.com/embed/D7Rb-YIU6yA?si=pVl2jqv6jbozDgdN",
     },
     {
       title: "Fibarcode Product Video",
